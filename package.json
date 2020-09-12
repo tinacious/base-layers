@@ -1,0 +1,11 @@
+{
+  "name": "base-layers",
+  "version": "0.1.0",
+  "description": "The foundation of your website's outfit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tina Holly <info@tinaciousdesign.com>",
+  "license": "ISC"
+}
