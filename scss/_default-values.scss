@@ -1,0 +1,40 @@
+// Spacing
+$spacer: 10px !default;
+
+// Buttons
+$btn-font: inherit !default;
+
+$btn-primary-fg: #fff !default;
+$btn-primary-bg: #f39 !default;
+
+$btn-secondary-fg: #fff !default;
+$btn-secondary-bg: #3d15b9 !default;
+
+$btn-tertiary-fg: #fff !default;
+$btn-tertiary-bg: #15b98c !default;
+
+$btn-disabled-opacity: 0.65 !default;
+$btn-border-radius: 4px !default;
+
+// Typography
+  // 1.067 — Minor Second
+  // 1.125 — Major Second
+  // 1.200 — Minor Third
+  // 1.250 — Major Third
+  // 1.333 — Perfect Fourth
+  // 1.414 — Augmented Fourth
+  // 1.500 — Perfect Fifth
+  // 1.618 — Golden Ratio
+
+$type-scale: 1.250 !default;
+
+// RWD Breakpoints
+$breakpoint-sm: 576px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-lg: 992px !default;
+$breakpoint-xl: 1200px !default;
+
+// Grid
+$grid-container-width: 1440px !default;
+$grid-gutter: 16px !default;
+$grid-column-count: 12 !default;

@@ -1,11 +1,14 @@
 {
   "name": "base-layers",
   "version": "0.1.0",
-  "description": "The foundation of your website's outfit",
-  "main": "index.js",
+  "description": "The foundation of your website's outfit 👙",
+  "main": "scss/base-layers.scss",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node-sass scss/base-layers.scss tmp/base-layers.css"
   },
   "author": "Tina Holly <info@tinaciousdesign.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
 }

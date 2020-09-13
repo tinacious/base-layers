@@ -1,0 +1,28 @@
+@import './_default-values.scss';
+
+// Components
+@import './buttons.scss';
+
+// Utils
+@import './typography.scss';
+
+
+// Typography
+p {
+  margin-top: $spacer;
+  margin-bottom: $spacer;
+}
+
+strong {
+  @include text--bold;
+}
+
+em {
+  @include text--italic;
+}
+
+
+// Components
+button {
+  @include btn;
+}

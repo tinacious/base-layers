@@ -1,0 +1,242 @@
+@import './_math.scss';
+@import './_default-values.scss';
+@import './rwd.scss';
+
+// https://type-scale.com
+//
+// 1.067 — Minor Second
+// 1.125 — Major Second
+// 1.200 — Minor Third
+// 1.250 — Major Third
+// 1.333 — Perfect Fourth
+// 1.414 — Augmented Fourth
+// 1.500 — Perfect Fifth
+// 1.618 — Golden Ratio
+
+// Uses $type-scale
+
+// XXXS
+@mixin text--xxxs {
+  font-size: #{pow($type-scale, -3)}rem;
+}
+.text--xxxs {
+  @include text--xxxs;
+}
+// RWD
+.text--bp-md--xxxs {
+  @include breakpoint-up(md) {
+    @include text--xxxs;
+  }
+}
+.text--bp-lg--xxxs {
+  @include breakpoint-up(lg) {
+    @include text--xxxs;
+  }
+}
+.text--bp-xl--xxxs {
+  @include breakpoint-up(xl) {
+    @include text--xxxs;
+  }
+}
+
+// XXS
+@mixin text--xxs {
+  font-size: #{pow($type-scale, -2)}rem;
+}
+// RWD
+.text--xxs {
+  @include text--xxs;
+}
+.text--bp-md--xxs {
+  @include breakpoint-up(md) {
+    @include text--xxs;
+  }
+}
+.text--bp-lg--xxs {
+  @include breakpoint-up(lg) {
+    @include text--xxs;
+  }
+}
+.text--bp-xl--xxs {
+  @include breakpoint-up(xl) {
+    @include text--xxs;
+  }
+}
+
+// XS
+@mixin text--xs {
+  font-size: #{pow($type-scale, -1)}rem;
+}
+.text--xs {
+  @include text--xs;
+}
+// RWD
+.text--bp-md--xs {
+  @include breakpoint-up(md) {
+    @include text--xs;
+  }
+}
+.text--bp-lg--xs {
+  @include breakpoint-up(lg) {
+    @include text--xs;
+  }
+}
+.text--bp-xl--xs {
+  @include breakpoint-up(xl) {
+    @include text--xs;
+  }
+}
+
+// SM
+// Default font size
+@mixin text--sm {
+  font-size: 1rem;
+}
+.text--sm {
+  @include text--sm;
+}
+// RWD
+.text--bp-md--sm {
+  @include breakpoint-up(md) {
+    @include text--sm;
+  }
+}
+.text--bp-lg--sm {
+  @include breakpoint-up(lg) {
+    @include text--sm;
+  }
+}
+.text--bp-xl--sm {
+  @include breakpoint-up(xl) {
+    @include text--sm;
+  }
+}
+
+// MD
+@mixin text--md {
+  font-size: #{pow($type-scale, 1)}rem;
+}
+.text--md {
+  @include text--md;
+}
+// RWD
+.text--bp-md--md {
+  @include breakpoint-up(md) {
+    @include text--md;
+  }
+}
+.text--bp-lg--md {
+  @include breakpoint-up(lg) {
+    @include text--md;
+  }
+}
+.text--bp-xl--md {
+  @include breakpoint-up(xl) {
+    @include text--md;
+  }
+}
+
+// LG
+@mixin text--lg {
+  font-size: #{pow($type-scale, 2)}rem;
+  line-height: 1.15;
+}
+.text--lg {
+  @include text--lg;
+}
+// RWD
+.text--bp-md--lg {
+  @include breakpoint-up(md) {
+    @include text--lg;
+  }
+}
+.text--bp-lg--lg {
+  @include breakpoint-up(lg) {
+    @include text--lg;
+  }
+}
+.text--bp-xl--lg {
+  @include breakpoint-up(xl) {
+    @include text--lg;
+  }
+}
+
+// XL
+@mixin text--xl {
+  font-size: #{pow($type-scale, 3)}rem;
+  line-height: 1.15;
+}
+.text--xl {
+  @include text--xl;
+}
+// RWD
+.text--bp-md--xl {
+  @include breakpoint-up(md) {
+    @include text--xl;
+  }
+}
+.text--bp-lg--xl {
+  @include breakpoint-up(lg) {
+    @include text--xl;
+  }
+}
+.text--bp-xl--xl {
+  @include breakpoint-up(xl) {
+    @include text--xl;
+  }
+}
+
+// XXL
+@mixin text--xxl {
+  font-size: #{pow($type-scale, 4)}rem;
+  line-height: 1.15;
+}
+.text--xxl {
+  @include text--xxl;
+}
+// RWD
+.text--bp-md--xxl {
+  @include breakpoint-up(md) {
+    @include text--xxl;
+  }
+}
+.text--bp-lg--xxl {
+  @include breakpoint-up(lg) {
+    @include text--xxl;
+  }
+}
+.text--bp-xl--xxl {
+  @include breakpoint-up(xl) {
+    @include text--xxl;
+  }
+}
+
+// XXXL
+@mixin text--xxxl {
+  font-size: #{pow($type-scale, 5)}rem;
+  line-height: 1.15;
+}
+.text--xxxl {
+  @include text--xxxl;
+}
+
+@mixin text--bold {
+  font-weight: 700;
+}
+.text--bold {
+  @include text--bold;
+}
+
+@mixin text--italic {
+  font-style: italic;
+}
+.text--italic {
+  @include text--italic;
+}
+
+@mixin text--oblique {
+  font-style: oblique;
+}
+.text--oblique {
+  @include text--oblique;
+}
