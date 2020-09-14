@@ -477,11 +477,12 @@ If you'd like to make buttons larger or smaller, combine them with text classes 
 
 Some reasonable defaults have been provided as an **optional** import but are not included by default. They include styles for the following:
 
-| HTML tag   | Styles applied                            |
-| ---------- | ----------------------------------------- |
-| `<strong>` | Bold text, e.g. **test**                  |
-| `<em>`     | Italic text, e.g. _test_                  |
-| `<button>` | [Button styles](#buttons) described above |
+| HTML tag   | Styles applied                                    |
+| ---------- | ------------------------------------------------- |
+| `<p>`      | Paragraphs have default vertical margins of `1em` |
+| `<strong>` | Bold text, e.g. **test**                          |
+| `<em>`     | Italic text, e.g. _test_                          |
+| `<button>` | [Button styles](#buttons) described above         |
 
 To use the globals, import them:
 
