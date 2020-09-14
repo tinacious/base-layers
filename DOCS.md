@@ -404,6 +404,9 @@ For a full-width grid, just omit the `.container`:
 </div>
 ```
 
+Get the [Chrome extension](https://github.com/tinacious/base-layers-chrome) to toggle a grid overlay.
+
+
 ## Buttons
 
 **Base Layers** provides a reasonable default button style.
