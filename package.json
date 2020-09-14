@@ -1,6 +1,6 @@
 {
   "name": "base-layers",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The foundation of your website's outfit 👙",
   "main": "scss/base-layers.scss",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "author": "Tina Holly <info@tinaciousdesign.com>",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "node-sass": "^4.14.1"
   }
 }

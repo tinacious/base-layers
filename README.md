@@ -3,7 +3,7 @@
 
 > The foundation of your website's outfit 👙🩲
 
-<img width="300px" src="assets/tank-top.png" />
+<img width="300px" src="https://github.com/tinacious/base-layers/raw/main/assets/tank-top.png" />
 
 - [About Base Layers](#about-base-layers)
   - [What's included?](#whats-included)

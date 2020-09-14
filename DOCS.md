@@ -104,9 +104,9 @@ body {
 }
 ```
 
-See the [`_default-values.scss`](scss/_default-values.scss) file for all available overrides.
+See the [`_default-values.scss`](https://github.com/tinacious/base-layers/blob/main/scss/_default-values.scss) file for all available overrides.
 
-Alternatively, you can choose to include only the modules of your choice. See [`base-layers.scss`](scss/base-layers.scss) for available modules.
+Alternatively, you can choose to include only the modules of your choice. See [`base-layers.scss`](https://github.com/tinacious/base-layers/blob/main/scss/base-layers.scss) for available modules.
 
 
 ## Responsive Breakpoints
@@ -243,7 +243,7 @@ If `$spacer` is 10px then this would output to the following:
 
 Font sizes are generated using a type scale and are based off of the font size of the document.
 
-<img src="assets/typography.png">
+<img src="https://github.com/tinacious/base-layers/raw/main/assets/typography.png">
 
 Here are some suggested type scales:
 
@@ -343,7 +343,7 @@ There are similar mixins available:
 
 The grid has 12 columns by default but this can be configured along with the gutter width.
 
-<img src="assets/grid.png">
+<img src="https://github.com/tinacious/base-layers/raw/main/assets/grid.png">
 
 Grids have the following structure:
 
@@ -408,7 +408,7 @@ For a full-width grid, just omit the `.container`:
 
 **Base Layers** provides a reasonable default button style.
 
-<img src="assets/buttons.png" width="330px">
+<img src="https://github.com/tinacious/base-layers/raw/main/assets/buttons.png" width="330px">
 
 By default, there are no button styles applied (unless you also import `globals.scss`). You can use the following button classes and mixins to style the desired elements.
 
@@ -468,7 +468,7 @@ If you'd like to make buttons larger or smaller, combine them with text classes 
 </button>
 ```
 
-<img src="assets/button-text-size.png" width="317px" />
+<img src="https://github.com/tinacious/base-layers/raw/main/assets/button-text-size.png" width="317px" />
 
 ## Optional Global Styles
 
