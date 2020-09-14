@@ -45,4 +45,4 @@ Utilities to help you with:
 
 ### API Documentation
 
-Read the [documentation](DOCS.md).
+Read the [documentation](https://github.com/tinacious/base-layers/blob/main/DOCS.md).
