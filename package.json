@@ -1,12 +1,21 @@
 {
   "name": "base-layers",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "The foundation of your website's outfit 👙",
   "main": "scss/base-layers.scss",
   "scripts": {
     "build": "node-sass scss/base-layers.scss tmp/base-layers.css"
   },
   "author": "Tina Holly <info@tinaciousdesign.com>",
+  "repository": {
+    "url": "https://github.com/tinacious/base-layers"
+  },
+  "keywords": [
+    "css-framework",
+    "css",
+    "sass",
+    "scss"
+  ],
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.14.1"
