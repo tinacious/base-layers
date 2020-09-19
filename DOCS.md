@@ -17,6 +17,7 @@
   - [Rows](#rows)
   - [Columns](#columns)
   - [Grid examples](#grid-examples)
+  - [Grid customization with mixins](#grid-customization-with-mixins)
 - [Buttons](#buttons)
   - [Button utility classes](#button-utility-classes)
     - [Button examples](#button-examples)
@@ -35,20 +36,21 @@
 
 ## Configuration
 
-Then, import it into your app's main SCSS file:
+Then, import it into your app's main SCSS file.
+
+If your build tooling supports importing SCSS from `node_modules` you can do the following:
+
+```scss
+// app.scss
+@import '~base-layers';
+```
+
+Otherwise, do the following:
 
 ```scss
 // app.scss
 
-@import '~base-layers';
-
-html {
-  font-size: 100%;
-}
-
-body {
-  line-height: 1.6;
-}
+@import '../path/to/node_modules/base-layers/scss/base-layers.scss';
 ```
 
 You can also customize some values. The following are the default settings:
@@ -93,6 +95,12 @@ $breakpoint-xl: 1200px;
 
 // Grid
 $grid-container-width: 1440px;
+$grid-container-padding-xs: 12px;
+$grid-container-padding-sm: 30px;
+$grid-container-padding-md: 60px;
+$grid-container-padding-lg: 80px;
+$grid-container-padding-xl: 100px;
+
 $grid-gutter: 16px;
 $grid-column-count: 12;
 
@@ -107,7 +115,7 @@ body {
 }
 ```
 
-See the [`_default-values.scss`](https://github.com/tinacious/base-layers/blob/main/scss/_default-values.scss) file for all available overrides.
+See the [`_defaults.scss`](https://github.com/tinacious/base-layers/blob/main/scss/_defaults.scss) file for all available overrides.
 
 Alternatively, you can choose to include only the modules of your choice. See [`base-layers.scss`](https://github.com/tinacious/base-layers/blob/main/scss/base-layers.scss) for available modules.
 
@@ -133,6 +141,8 @@ Each part of the framework has varying support for breakpoints. See each relevan
 There are some mixins available to help use the breakpoints:
 
 ```scss
+@import '~base-layers/scss/utils/rwd';
+
 @include breakpoint-up(breakpoint) {
   // content for the provided breakpoint and larger
 }
@@ -408,6 +418,50 @@ For a full-width grid, just omit the `.container`:
 ```
 
 Get the [Chrome extension](https://chrome.google.com/webstore/detail/base-layers/fhkhleopmmdiokahobpnchddheokcldd) to toggle a grid overlay.
+
+
+### Grid customization with mixins
+
+Sometimes you want a grid without gutters, or a grid with a different number of columns. You can get this flexibility by using the mixins and creating the necessary CSS classes in your project.
+
+```scss
+@import '~base-layers/scss/utils/grid';
+
+.tight-row {
+  @include row($gutter: 0);
+}
+
+// outputs
+//    .tight-col-1     ->  .tight-col-16
+//    .tight-col-xs-1  ->  .tight-col-xs-16
+@include make-default-columns(
+  $columns: 16,
+  $gutter: 0,
+  $classname: tight-col
+);
+
+// outputs .tight-col-sm-1  ->  .tight-col-sm-16
+@include breakpoint-up(sm) {
+  @include make-columns-for-breakpoint(
+    sm,
+    $columns: 16,
+    $gutter: 0,
+    $classname: tight-col
+  );
+}
+
+// outputs .tight-col-md-1  ->  .tight-col-md-16
+@include breakpoint-up(md) {
+  @include make-columns-for-breakpoint(
+    md,
+    $columns: 16,
+    $gutter: 0,
+    $classname: tight-col
+  );
+}
+
+// continue with every breakpoint you'd like to support
+```
 
 
 ## Buttons

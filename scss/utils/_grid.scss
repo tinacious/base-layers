@@ -1,0 +1,100 @@
+@import '../defaults';
+@import './rwd.scss';
+
+
+//////////////////////////
+// Container
+//////////////////////////
+@function get-container-max-width($grid-padding) {
+  @return $grid-container-width + ($grid-padding * 2);
+}
+
+@mixin container {
+  box-sizing: border-box;
+  max-width: get-container-max-width($grid-container-padding-xs);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $grid-container-padding-xs;
+  padding-right: $grid-container-padding-xs;
+  overflow-x: hidden;
+
+  @include breakpoint-up(sm) {
+    max-width: get-container-max-width($grid-container-padding-sm);
+    padding-left: $grid-container-padding-sm;
+    padding-right: $grid-container-padding-sm;
+  }
+
+  @include breakpoint-up(md) {
+    max-width: get-container-max-width($grid-container-padding-md);
+    padding-left: $grid-container-padding-md;
+    padding-right: $grid-container-padding-md;
+  }
+
+  @include breakpoint-up(lg) {
+    max-width: get-container-max-width($grid-container-padding-lg);
+    padding-left: $grid-container-padding-lg;
+    padding-right: $grid-container-padding-lg;
+  }
+
+  @include breakpoint-up(xl) {
+    max-width: get-container-max-width($grid-container-padding-xl);
+    padding-left: $grid-container-padding-xl;
+    padding-right: $grid-container-padding-xl;
+  }
+}
+
+
+//////////////////////////
+// Row
+//////////////////////////
+@mixin row($gutter: $grid-gutter) {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  margin-left: -$gutter/2;
+  margin-right: -$gutter/2;
+  overflow-x: hidden;
+}
+
+
+//////////////////////////
+// Columns
+//////////////////////////
+@mixin column($columns, $gutter: $grid-gutter, $total-columns: $grid-column-count) {
+  box-sizing: border-box;
+  width: percentage($columns / $total-columns);
+  padding-left: $gutter/2;
+  padding-right: $gutter/2;
+}
+
+
+//////////////////////////
+// Grid
+//////////////////////////
+
+
+@mixin make-default-columns($columns: $grid-column-count, $gutter: $grid-gutter, $classname: col) {
+  @for $i from 1 through $columns {
+    .#{$classname}-#{$i} {
+      @include column($i, $gutter, $total-columns: $columns);
+    }
+
+    .#{$classname}-xs-#{$i} {
+      @include column($i, $gutter, $total-columns: $columns);
+    }
+  }
+}
+
+// Make a grid for the provided breakpoint
+// .col-<bp>-1 -> .col-<bp>-12
+@mixin make-columns-for-breakpoint($breakpoint-key, $columns: $grid-column-count, $gutter: $grid-gutter, $classname: col) {
+  $breakpoint-value: map-get($breakpoints-up, $breakpoint-key);
+
+  @for $i from 1 through $columns {
+    .#{$classname}-#{$breakpoint-key}-#{$i} {
+      @include breakpoint-up($breakpoint-key) {
+        @include column($i, $gutter, $total-columns: $columns);
+      }
+    }
+  }
+}

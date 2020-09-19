@@ -1,0 +1,88 @@
+@import '../defaults';
+@import './rwd';
+
+$edges: (
+  'all': '',
+  'top': 't',
+  'right': 'r',
+  'bottom': 'b',
+  'left': 'l',
+);
+
+$spacing-types: (
+  'padding': 'p',
+  'margin': 'm',
+);
+
+@mixin make-default-spacing($max: $max-spacing-multiplier) {
+  @for $i from 0 through $max {
+
+    @each $spacing-type, $spacing-label in $spacing-types {
+
+      // Iterate through shared edges
+      // Horizontal
+      .#{$spacing-label}h-#{$i} {
+        #{$spacing-type}-left: ($i * $spacer);
+        #{$spacing-type}-right: ($i * $spacer);
+      }
+
+      // Vertical
+      .#{$spacing-label}v-#{$i} {
+        #{$spacing-type}-top: ($i * $spacer);
+        #{$spacing-type}-bottom: ($i * $spacer);
+      }
+
+      // Iterate through individual edges
+      @each $edge-key, $edge-value in $edges {
+
+        // Individual sides, e.g. pt-1
+        .#{$spacing-label}#{$edge-value}-#{$i} {
+          @if $edge-key=='all' {
+            #{$spacing-type}: ($i * $spacer);
+          }
+
+          @else {
+            #{$spacing-type}-#{$edge-key}: ($i * $spacer);
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@mixin make-spacing-for-breakpoint($breakpoint-key, $max: $max-spacing-multiplier) {
+  @for $i from 0 through $max {
+
+    @each $spacing-type, $spacing-label in $spacing-types {
+
+      // Iterate through shared edges
+      // Horizontal
+      .#{$spacing-label}h-#{$breakpoint-key}-#{$i} {
+        #{$spacing-type}-left: ($i * $spacer);
+        #{$spacing-type}-right: ($i * $spacer);
+      }
+
+      // Vertical
+      .#{$spacing-label}v-#{$breakpoint-key}-#{$i} {
+        #{$spacing-type}-top: ($i * $spacer);
+        #{$spacing-type}-bottom: ($i * $spacer);
+      }
+
+      // Iterate through individual edges
+      @each $edge-key, $edge-value in $edges {
+        // Individual sides, e.g. pt-<bp>-1
+        .#{$spacing-label}#{$edge-value}-#{$breakpoint-key}-#{$i} {
+          @if $edge-key=='all' {
+            #{$spacing-type}: ($i * $spacer);
+          }
+
+          @else {
+            #{$spacing-type}-#{$edge-key}: ($i * $spacer);
+          }
+        }
+      }
+
+    }
+  }
+}

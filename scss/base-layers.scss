@@ -1,5 +1,5 @@
 // The values that you can override
-@import './_default-values.scss';
+@import './defaults';
 
 // Strip away all your styles
 @import './reset.scss';
@@ -8,7 +8,10 @@
 @import './buttons.scss';
 @import './grid.scss';
 
-// Utils
-@import './rwd.scss';
+
+// HTML/CSS helper classes
 @import './typography.scss';
 @import './spacing.scss';
+// Sass Mixins & utils
+@import './utils/rwd.scss';
+@import './utils/grid.scss';

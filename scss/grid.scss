@@ -1,62 +1,35 @@
-@import './_default-values.scss';
-@import './rwd.scss';
+@import './defaults';
+@import './utils/grid';
 
-// Container
-@mixin container($gutter: $grid-gutter) {
-  max-width: $grid-container-width;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: $gutter;
-  padding-right: $gutter;
-}
+
 .container {
   @include container;
 }
 
-// Row -> for full-width sites
-@mixin row($gutter: $grid-gutter) {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding-left: $gutter;
-  padding-right: $gutter;
-  flex-grow: 1;
-}
 .row {
   @include row;
 }
 
-// Columns
-@mixin column($columns, $gutter: $grid-gutter) {
-  $width: percentage($columns / $grid-column-count);
-  $width-with-gutter-offset: calc(#{$width} - #{$grid-gutter/2});
+// Default grid
+// .col-1 -> .col-12
+// .col-xs-1 -> .col-xs-12
+@include make-default-columns;
 
-  // No gutters for col-12
-  $is-full-width: $columns / $grid-column-count == 1;
 
-  width: if($is-full-width, 100%, $width-with-gutter-offset);
+// For breakpoints
+//    .col-<bp>-1 -> .col-<bp>-12
+@include breakpoint-up(sm) {
+  @include make-columns-for-breakpoint(sm);
 }
 
-// Build columns (col-xs-1 -> col-xs-12)
-@for $i from 1 to 13 {
-  .col-#{$i} {
-    @include column($i);
-  }
-
-  .col-xs-#{$i} {
-    @include column($i);
-  }
+@include breakpoint-up(md) {
+  @include make-columns-for-breakpoint(md);
 }
 
-// Build columns (col-md-1 -> col-md-12) -> (col-xl-1 -> col-xl-12)
-// Breakpoints: sm, md, lg, xl
-@for $i from 1 to 13 {
-  // Specific breakpoints
-  @each $breakpoint-key, $breakpoint-value in $breakpoints-up {
-    .col-#{$breakpoint-key}-#{$i} {
-      @include breakpoint-up($breakpoint-key) {
-        @include column($i);
-      }
-    }
-  }
+@include breakpoint-up(lg) {
+  @include make-columns-for-breakpoint(lg);
+}
+
+@include breakpoint-up(xl) {
+  @include make-columns-for-breakpoint(xl);
 }
