@@ -17,6 +17,7 @@
   - [Rows](#rows)
   - [Columns](#columns)
   - [Grid examples](#grid-examples)
+  - [Grid customization with mixins](#grid-customization-with-mixins)
 - [Buttons](#buttons)
   - [Button utility classes](#button-utility-classes)
     - [Button examples](#button-examples)
@@ -140,6 +141,8 @@ Each part of the framework has varying support for breakpoints. See each relevan
 There are some mixins available to help use the breakpoints:
 
 ```scss
+@import '~base-layers/scss/utils/rwd';
+
 @include breakpoint-up(breakpoint) {
   // content for the provided breakpoint and larger
 }
@@ -415,6 +418,50 @@ For a full-width grid, just omit the `.container`:
 ```
 
 Get the [Chrome extension](https://chrome.google.com/webstore/detail/base-layers/fhkhleopmmdiokahobpnchddheokcldd) to toggle a grid overlay.
+
+
+### Grid customization with mixins
+
+Sometimes you want a grid without gutters, or a grid with a different number of columns. You can get this flexibility by using the mixins and creating the necessary CSS classes in your project.
+
+```scss
+@import '~base-layers/scss/utils/grid';
+
+.tight-row {
+  @include row($gutter: 0);
+}
+
+// outputs
+//    .tight-col-1     ->  .tight-col-16
+//    .tight-col-xs-1  ->  .tight-col-xs-16
+@include make-default-columns(
+  $columns: 16,
+  $gutter: 0,
+  $classname: tight-col
+);
+
+// outputs .tight-col-sm-1  ->  .tight-col-sm-16
+@include breakpoint-up(sm) {
+  @include make-columns-for-breakpoint(
+    sm,
+    $columns: 16,
+    $gutter: 0,
+    $classname: tight-col
+  );
+}
+
+// outputs .tight-col-md-1  ->  .tight-col-md-16
+@include breakpoint-up(md) {
+  @include make-columns-for-breakpoint(
+    md,
+    $columns: 16,
+    $gutter: 0,
+    $classname: tight-col
+  );
+}
+
+// continue with every breakpoint you'd like to support
+```
 
 
 ## Buttons

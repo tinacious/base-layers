@@ -9,7 +9,7 @@
   @return $grid-container-width + ($grid-padding * 2);
 }
 
-@mixin container($gutter: $grid-gutter) {
+@mixin container {
   box-sizing: border-box;
   max-width: get-container-max-width($grid-container-padding-xs);
   margin-left: auto;
@@ -60,9 +60,9 @@
 //////////////////////////
 // Columns
 //////////////////////////
-@mixin column($columns, $gutter: $grid-gutter) {
+@mixin column($columns, $gutter: $grid-gutter, $total-columns: $grid-column-count) {
   box-sizing: border-box;
-  width: percentage($columns / $grid-column-count);
+  width: percentage($columns / $total-columns);
   padding-left: $gutter/2;
   padding-right: $gutter/2;
 }
@@ -73,27 +73,27 @@
 //////////////////////////
 
 
-@mixin make-default-columns {
-  @for $i from 1 through 12 {
-    .col-#{$i} {
-      @include column($i);
+@mixin make-default-columns($columns: $grid-column-count, $gutter: $grid-gutter, $classname: col) {
+  @for $i from 1 through $columns {
+    .#{$classname}-#{$i} {
+      @include column($i, $gutter, $total-columns: $columns);
     }
 
-    .col-xs-#{$i} {
-      @include column($i);
+    .#{$classname}-xs-#{$i} {
+      @include column($i, $gutter, $total-columns: $columns);
     }
   }
 }
 
 // Make a grid for the provided breakpoint
 // .col-<bp>-1 -> .col-<bp>-12
-@mixin make-columns-for-breakpoint($breakpoint-key) {
+@mixin make-columns-for-breakpoint($breakpoint-key, $columns: $grid-column-count, $gutter: $grid-gutter, $classname: col) {
   $breakpoint-value: map-get($breakpoints-up, $breakpoint-key);
 
-  @for $i from 1 through 12 {
-    .col-#{$breakpoint-key}-#{$i} {
+  @for $i from 1 through $columns {
+    .#{$classname}-#{$breakpoint-key}-#{$i} {
       @include breakpoint-up($breakpoint-key) {
-        @include column($i);
+        @include column($i, $gutter, $total-columns: $columns);
       }
     }
   }
