@@ -11,6 +11,9 @@
 - [Typography](#typography)
   - [Line heights](#line-heights)
   - [Typography utility classes](#typography-utility-classes)
+    - [Font sizing](#font-sizing)
+    - [Text styling](#text-styling)
+    - [Text alignment](#text-alignment)
   - [Typography mixins](#typography-mixins)
 - [Grid](#grid)
   - [Container](#container)
@@ -309,6 +312,8 @@ Line heights are adjusted for sizes `lg` and up to `1.15`.
 
 ### Typography utility classes
 
+#### Font sizing
+
 Utility classes follow this pattern:
 
     .text--<size>
@@ -336,11 +341,32 @@ To get text that is XXL only on the XL breakpoint, you would use the following:
     .text--bp-xl--xxl
 
 
+#### Text styling
+
+    .text--bold
+    .text--italic
+    .text--oblique
+    .text--underline
+
+
+#### Text alignment
+
+    .text--center
+    .text--align-center
+
+    .text--right
+    .text--align-right
+
+    .text--left
+    .text--align-left
+
+
 ### Typography mixins
 
 There are similar mixins available:
 
 ```scss
+// Font sizing
 @include text-xxxs;
 @include text-xxs;
 @include text-xs;
@@ -350,6 +376,18 @@ There are similar mixins available:
 @include text-xl;
 @include text-xxl;
 @include text-xxxl;
+
+// Text styling
+@include text--bold;
+@include text--italic;
+@include text--oblique;
+@include text--underline;
+
+// Text alignment
+@include text--align-center;
+@include text--align-right;
+@include text--align-left;
+@include text--align-justify;
 ```
 
 ## Grid

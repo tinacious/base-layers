@@ -220,6 +220,7 @@
   @include text--xxxl;
 }
 
+// Text style utils
 @mixin text--bold {
   font-weight: 700;
 }
@@ -239,4 +240,44 @@
 }
 .text--oblique {
   @include text--oblique;
+}
+
+@mixin text--underline {
+  text-decoration: underline;
+}
+.text--underline {
+  @include text--underline;
+}
+
+// Alignment
+@mixin text--align-center {
+  text-align: center;
+}
+.text--align-center,
+.text--center {
+  @include text--align-center;
+}
+
+@mixin text--align-right {
+  text-align: right;
+}
+.text--align-right,
+.text--right {
+  @include text--align-right;
+}
+
+@mixin text--align-left {
+  text-align: left;
+}
+.text--align-left,
+.text--left {
+  @include text--align-left;
+}
+
+@mixin text--align-justify {
+  text-align: justify;
+}
+.text--align-justify,
+.text--justify {
+  @include text--align-justify;
 }
