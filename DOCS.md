@@ -28,8 +28,6 @@
     - [Button tips](#button-tips)
 - [Optional Global Styles](#optional-global-styles)
 - [Examples](#examples)
-  - [React](#react)
-  - [Vue.js](#vuejs)
 
 
 ## Installation
@@ -592,12 +590,12 @@ To use the globals, import them:
 
 ## Examples
 
-### React
-- [View](https://5qet3.csb.app/)
-- [Edit](https://codesandbox.io/s/base-layers-react-example-5qet3?file=/src/styles.scss)
-
-
-### Vue.js
-
-- [View](https://qe2m1.csb.app/)
-- [Edit](https://codesandbox.io/s/base-layers-vuejs-example-qe2m1)
+- Example with a custom grid
+  - [View](https://1x10r.csb.app/)
+  - [Edit](https://codesandbox.io/s/base-layers-custom-grid-1x10r)
+- React
+  - [View](https://5qet3.csb.app/)
+  - [Edit](https://codesandbox.io/s/base-layers-react-example-5qet3?file=/src/styles.scss)
+- Vue.js
+  - [View](https://qe2m1.csb.app/)
+  - [Edit](https://codesandbox.io/s/base-layers-vuejs-example-qe2m1)
