@@ -1,105 +1,60 @@
 @import './defaults';
 @import './utils/rwd';
-
-$edges: (
-  'all': '',
-  'top': 't',
-  'right': 'r',
-  'bottom': 'b',
-  'left': 'l',
-);
-
-$spacing-types: (
-  'padding': 'p',
-  'margin': 'm',
-);
-
-$breakpoints: keys($breakpoints-up);
+@import './utils/spacing';
 
 /**
   Eventually this should result in a bunch of
   utility classes like this:
 
+  .<property><side>-<n>
+
   // Padding
     // Individual sides
-    .pt-0 -> .pt-10
-    .pr-0 -> .pr-10
-    .pb-0 -> .pb-10
-    .pl-0 -> .pl-10
+    .pt-0 -> .pt-30
+    .pr-0 -> .pr-30
+    .pb-0 -> .pb-30
+    .pl-0 -> .pl-30
 
     // Multiple sides
-    .p-0  -> .p-10   // all
-    .pv-0 -> .pv-10  // vertical
-    .ph-0 -> .ph-10  // horizontal
+    .p-0  -> .p-30   // all
+    .pv-0 -> .pv-30  // vertical
+    .ph-0 -> .ph-30  // horizontal
 
   // Margins
     // Individual sides
-    .mt-0 -> .mt-10
-    .mr-0 -> .mr-10
-    .mb-0 -> .mb-10
-    .ml-0 -> .ml-10
+    .mt-0 -> .mt-30
+    .mr-0 -> .mr-30
+    .mb-0 -> .mb-30
+    .ml-0 -> .ml-30
 
     // Multiple sides
-    .m-0  -> .m-10   // all
-    .mv-0 -> .mv-10  // vertical
-    .mh-0 -> .mh-10  // horizontal
+    .m-0  -> .m-30   // all
+    .mv-0 -> .mv-30  // vertical
+    .mh-0 -> .mh-30  // horizontal
  */
+@include make-default-spacing;
+@include make-spacing-for-breakpoint(xs);
 
-// Support spacing multipliers from 0 to 20
-@for $i from 0 to 21 {
-  // Iterate through the spacing types
-  @each $spacing-type, $spacing-label in $spacing-types {
-    // Iterate through individual edges
-    @each $edge-key, $edge-value in $edges {
-      // Individual sides, e.g. pt-1
-      .#{$spacing-label}#{$edge-value}-#{$i} {
-        @if $edge-key == 'all' {
-          #{$spacing-type}: ($i * $spacer);
-        } @else {
-          #{$spacing-type}-#{$edge-key}: ($i * $spacer);
-        }
-      }
 
-      // Individual sides -> breakpoint, e.g. pt-md-1
-      @each $breakpoint-key, $breakpoint-value in $breakpoints-up {
-        .#{$spacing-label}#{$edge-value}-#{$breakpoint-key}-#{$i} {
-          @include breakpoint-up($breakpoint-key) {
-            @if $edge-key == 'all' {
-              #{$spacing-type}: ($i * $spacer);
-            } @else {
-              #{$spacing-type}-#{$edge-key}: ($i * $spacer);
-            }
-          }
-        }
-      }
-    }
+/**
+  And for each breakpoint
 
-    // Iterate through shared edges
-    // Horizontal
-    .#{$spacing-label}h-#{$i} {
-      #{$spacing-type}-left: ($i * $spacer);
-      #{$spacing-type}-right: ($i * $spacer);
-    }
+  .<property><side>-<breakpoint>-<n>
 
-    // Vertical
-    .#{$spacing-label}v-#{$i} {
-      #{$spacing-type}-top: ($i * $spacer);
-      #{$spacing-type}-bottom: ($i * $spacer);
-    }
+  e.g. .pt-sm-0  -> .pt-sm-30
+ */
+@include breakpoint-up(sm) {
+  @include make-spacing-for-breakpoint(sm);
+}
 
-    @each $breakpoint-key, $breakpoint-value in $breakpoints-up {
-      @include breakpoint-up($breakpoint-key) {
-        .#{$spacing-label}h-#{$breakpoint-key}-#{$i} {
-          #{$spacing-type}-left: ($i * $spacer);
-          #{$spacing-type}-right: ($i * $spacer);
-        }
+@include breakpoint-up(md) {
+  @include make-spacing-for-breakpoint(md);
+}
 
-        // Vertical
-        .#{$spacing-label}v-#{$breakpoint-key}-#{$i} {
-          #{$spacing-type}-top: ($i * $spacer);
-          #{$spacing-type}-bottom: ($i * $spacer);
-        }
-      }
-    }
-  }
+@include breakpoint-up(lg) {
+  @include make-spacing-for-breakpoint(lg);
+}
+
+@include breakpoint-up(xl) {
+  @include make-spacing-for-breakpoint(xl);
 }
