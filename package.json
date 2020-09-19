@@ -4,7 +4,8 @@
   "description": "The foundation of your website's outfit 👙",
   "main": "scss/base-layers.scss",
   "scripts": {
-    "build": "node-sass scss/base-layers.scss tmp/base-layers.css"
+    "postinstall": "npm run build",
+    "build": "node-sass scss/base-layers.scss lib/base-layers.css"
   },
   "author": "Tina Holly <info@tinaciousdesign.com>",
   "repository": {

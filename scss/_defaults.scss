@@ -34,6 +34,22 @@ $breakpoint-md: 768px !default;
 $breakpoint-lg: 992px !default;
 $breakpoint-xl: 1200px !default;
 
+$breakpoints-up: (
+  sm: $breakpoint-sm,
+  md: $breakpoint-md,
+  lg: $breakpoint-lg,
+  xl: $breakpoint-xl
+);
+
+$breakpoint-down-diff: 0.5;
+$breakpoints-down: (
+  sm: $breakpoint-sm - $breakpoint-down-diff,
+  md: $breakpoint-md - $breakpoint-down-diff,
+  lg: $breakpoint-lg - $breakpoint-down-diff,
+  xl: $breakpoint-xl - $breakpoint-down-diff
+);
+
+
 // Grid
 $grid-container-width: 1440px !default;
 $grid-container-padding-xs: 12px !default;

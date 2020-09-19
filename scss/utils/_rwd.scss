@@ -1,0 +1,17 @@
+@import '../defaults';
+
+@mixin breakpoint-up($breakpoint) {
+  $bp: map-get($breakpoints-up, $breakpoint);
+
+  @media (min-width: #{$bp}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($breakpoint) {
+  $bp: map-get($breakpoints-down, $breakpoint);
+
+  @media (max-width: #{$bp}) {
+    @content;
+  }
+}

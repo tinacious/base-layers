@@ -114,7 +114,7 @@ body {
 }
 ```
 
-See the [`_default-values.scss`](https://github.com/tinacious/base-layers/blob/main/scss/_default-values.scss) file for all available overrides.
+See the [`_defaults.scss`](https://github.com/tinacious/base-layers/blob/main/scss/_defaults.scss) file for all available overrides.
 
 Alternatively, you can choose to include only the modules of your choice. See [`base-layers.scss`](https://github.com/tinacious/base-layers/blob/main/scss/base-layers.scss) for available modules.
 
