@@ -35,20 +35,21 @@
 
 ## Configuration
 
-Then, import it into your app's main SCSS file:
+Then, import it into your app's main SCSS file.
+
+If your build tooling supports importing SCSS from `node_modules` you can do the following:
+
+```scss
+// app.scss
+@import '~base-layers';
+```
+
+Otherwise, do the following:
 
 ```scss
 // app.scss
 
-@import '~base-layers';
-
-html {
-  font-size: 100%;
-}
-
-body {
-  line-height: 1.6;
-}
+@import '../path/to/node_modules/base-layers/scss/base-layers.scss';
 ```
 
 You can also customize some values. The following are the default settings:
