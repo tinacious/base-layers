@@ -1,6 +1,6 @@
 {
   "name": "base-layers",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "The foundation of your website's outfit 👙",
   "main": "scss/base-layers.scss",
   "scripts": {
@@ -18,7 +18,7 @@
     "scss"
   ],
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "node-sass": "^4.14.1"
   }
 }
