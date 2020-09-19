@@ -41,7 +41,7 @@ Utilities to help you with:
 
 ### Installation
 
-    npm install base-layers
+    npm install base-layers --save
 
 ### API Documentation
 
