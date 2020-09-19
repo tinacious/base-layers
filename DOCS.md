@@ -94,6 +94,12 @@ $breakpoint-xl: 1200px;
 
 // Grid
 $grid-container-width: 1440px;
+$grid-container-padding-xs: 12px;
+$grid-container-padding-sm: 30px;
+$grid-container-padding-md: 60px;
+$grid-container-padding-lg: 80px;
+$grid-container-padding-xl: 100px;
+
 $grid-gutter: 16px;
 $grid-column-count: 12;
 

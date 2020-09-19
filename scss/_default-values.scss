@@ -36,5 +36,11 @@ $breakpoint-xl: 1200px !default;
 
 // Grid
 $grid-container-width: 1440px !default;
+$grid-container-padding-xs: 12px !default;
+$grid-container-padding-sm: 30px !default;
+$grid-container-padding-md: 60px !default;
+$grid-container-padding-lg: 80px !default;
+$grid-container-padding-xl: 100px !default;
+
 $grid-gutter: 16px !default;
 $grid-column-count: 12 !default;
