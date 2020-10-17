@@ -1,6 +1,10 @@
 @import './defaults';
 @import './utils/rwd.scss';
 
+/**
+  Buttons
+ */
+
 @mixin btn {
   padding: 0.5em 1em;
   line-height: 1;

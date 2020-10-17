@@ -14,6 +14,11 @@ body {
   color: $btn-tertiary-bg;
 }
 
+::selection {
+  background: $btn-primary-bg;
+  color: white;
+}
+
 img {
   max-width: 100%;
 }
@@ -46,4 +51,46 @@ h4 {
   @include text--bold;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+}
+
+
+$bullet-size: 22px;
+ul {
+  padding-left: 2em;
+  line-height: 2;
+}
+
+li {
+  position: relative;
+
+  &:before {
+    width: $bullet-size;
+    height: $bullet-size;
+    display: block;
+    content: ' ';
+    position: absolute;
+    top: $bullet-size / 1.4;
+    left: -2em;
+    transform: translateY(-50%);
+    background: center center no-repeat url('https://github.com/tinacious/base-layers/raw/main/assets/tank-top.png');
+    background-size: $bullet-size $bullet-size;
+  }
+}
+
+a {
+  color: $btn-secondary-bg;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 200ms linear;
+
+  &:hover {
+    color: $btn-primary-bg;
+  }
+}
+
+.demo-title-description {
+  color: $btn-tertiary-bg;
+}
+.demo-text-size {
+  color: $btn-primary-bg;
 }

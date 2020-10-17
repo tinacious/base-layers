@@ -1,6 +1,9 @@
 @import './defaults';
 @import './utils/grid';
 
+/**
+  Grid
+ */
 
 .container {
   @include container;

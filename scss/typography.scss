@@ -15,6 +15,11 @@
 
 // Uses $type-scale
 
+/**
+  Typography
+ */
+
+/* font sizes */
 // XXXS
 @mixin text--xxxs {
   font-size: #{pow($type-scale, -3)}rem;
@@ -220,6 +225,7 @@
   @include text--xxxl;
 }
 
+/* font styles */
 // Text style utils
 @mixin text--bold {
   font-weight: 700;
@@ -256,7 +262,7 @@
   @include text--underline;
 }
 
-// Alignment
+/* Text Alignment */
 
 // Center
 @mixin text--align-center {
@@ -287,6 +293,7 @@
   @include text--align-left;
 }
 
+
 // Justified
 @mixin text--align-justify {
   text-align: justify;
@@ -297,7 +304,7 @@
 }
 
 
-// Text Alignment RWD
+/* Responsive Text alignment */
 
 // SM
 //    Left
