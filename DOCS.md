@@ -409,6 +409,11 @@ The `.container` is optional and sets a max-width. If you want a full-span grid,
 
 Your columns need to go in rows.
 
+When you don't provide all 12 columns in a row, or your rows overflow to the next line, you can choose how to align these items. By default, they are left aligned. You can choose the following:
+
+- `.row--center` to center align
+- `.row--justify` to justify them (space them out)
+
 
 ### Columns
 
