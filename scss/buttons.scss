@@ -1,10 +1,11 @@
 @import './defaults';
+@import './utils/rwd.scss';
 
 @mixin btn {
   padding: 0.5em 1em;
   line-height: 1;
   border: 0;
-  margin-right: 0.5em;
+  margin: 0;
   border-radius: $btn-border-radius;
   display: inline-block;
   font-family: $btn-font;
@@ -65,4 +66,62 @@
 }
 .btn--unstyled {
   @include btn--unstyled;
+}
+
+
+// Layout
+// Some handy button layouts for aligning buttons
+// Layouts:
+//    - left
+//    - right
+//    - center
+//    - justified
+// Usage:
+//    <div class="button-layout button-layout--TYPE">
+//      <div class="button-layout__item">
+// Where TYPE = left | right | center | justify
+// Layout only, no extra margins around it (only between buttons)
+// Only kicks in on a specific breakpoint, otherwise buttons are stacked
+.button-layout {}
+
+.button-layout__item {
+  margin-bottom: $btn-layout-item-margin;
+}
+
+@include breakpoint-up($btn-layout-breakpoint) {
+  .button-layout {
+    display: flex;
+    width: 100%;
+  }
+
+  .button-layout--left {
+    justify-content: flex-start;
+  }
+
+  .button-layout--center {
+    justify-content: center;
+  }
+
+  .button-layout--right {
+    justify-content: flex-end;
+  }
+
+  .button-layout--justify,
+  .button-layout--justified {
+    justify-content: space-between;
+  }
+
+  .button-layout__item {
+    margin-left: $btn-layout-item-margin;
+    margin-right: $btn-layout-item-margin;
+    margin-bottom: 0;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
 }

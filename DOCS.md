@@ -77,6 +77,9 @@ $btn-tertiary-bg: #15b98c;
 $btn-disabled-opacity: 0.65;
 $btn-border-radius: 4px;
 
+$btn-layout-item-margin: 6px;
+$btn-layout-breakpoint: md;
+
 // Typography
   // 1.067 — Minor Second
   // 1.125 — Major Second
@@ -342,6 +345,7 @@ To get text that is XXL only on the XL breakpoint, you would use the following:
 #### Text styling
 
     .text--bold
+    .text--semi-bold
     .text--italic
     .text--oblique
     .text--underline
@@ -358,6 +362,15 @@ To get text that is XXL only on the XL breakpoint, you would use the following:
     .text--left
     .text--align-left
 
+Those apply to all breakpoints. The pattern is as follows:
+
+    .text--bp-<breakpoint>--<alignment>
+
+For example:
+
+    .text--bp-lg--center
+
+So it is very similar except it has an extra `--bp-XX--` value.
 
 ### Typography mixins
 
@@ -377,6 +390,7 @@ There are similar mixins available:
 
 // Text styling
 @include text--bold;
+@include text--semi-bold;
 @include text--italic;
 @include text--oblique;
 @include text--underline;
@@ -408,6 +422,11 @@ The `.container` is optional and sets a max-width. If you want a full-span grid,
 ### Rows
 
 Your columns need to go in rows.
+
+When you don't provide all 12 columns in a row, or your rows overflow to the next line, you can choose how to align these items. By default, they are left aligned. You can choose the following:
+
+- `.row--center` to center align
+- `.row--justify` to justify them (space them out)
 
 
 ### Columns
