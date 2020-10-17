@@ -342,6 +342,7 @@ To get text that is XXL only on the XL breakpoint, you would use the following:
 #### Text styling
 
     .text--bold
+    .text--semi-bold
     .text--italic
     .text--oblique
     .text--underline
@@ -377,6 +378,7 @@ There are similar mixins available:
 
 // Text styling
 @include text--bold;
+@include text--semi-bold;
 @include text--italic;
 @include text--oblique;
 @include text--underline;
