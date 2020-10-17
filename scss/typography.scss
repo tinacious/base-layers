@@ -257,6 +257,8 @@
 }
 
 // Alignment
+
+// Center
 @mixin text--align-center {
   text-align: center;
 }
@@ -265,6 +267,8 @@
   @include text--align-center;
 }
 
+
+// Right
 @mixin text--align-right {
   text-align: right;
 }
@@ -273,6 +277,8 @@
   @include text--align-right;
 }
 
+
+// Left
 @mixin text--align-left {
   text-align: left;
 }
@@ -281,10 +287,123 @@
   @include text--align-left;
 }
 
+// Justified
 @mixin text--align-justify {
   text-align: justify;
 }
 .text--align-justify,
 .text--justify {
   @include text--align-justify;
+}
+
+
+// Text Alignment RWD
+
+// SM
+//    Left
+.text--bp-sm--left {
+  @include breakpoint-up(sm) {
+    text-align: left;
+  }
+}
+//    Justify
+.text--bp-sm--justify,
+.text--bp-sm--justified {
+  @include breakpoint-up(sm) {
+    text-align: justify;
+  }
+}
+//    Right
+.text--bp-sm--right {
+  @include breakpoint-up(sm) {
+    text-align: right;
+  }
+}
+//    Center
+.text--bp-sm--center {
+  @include breakpoint-up(sm) {
+    text-align: center;
+  }
+}
+
+// MD
+//    Left
+.text--bp-md--left {
+  @include breakpoint-up(md) {
+    text-align: left;
+  }
+}
+//    Right
+.text--bp-md--right {
+  @include breakpoint-up(md) {
+    text-align: right;
+  }
+}
+//    Center
+.text--bp-md--center {
+  @include breakpoint-up(md) {
+    text-align: center;
+  }
+}
+
+//    Justify
+.text--bp-md--justify,
+.text--bp-md--justified {
+  @include breakpoint-up(md) {
+    text-align: justify;
+  }
+}
+
+// LG
+//    Left
+.text--bp-lg--left {
+  @include breakpoint-up(lg) {
+    text-align: left;
+  }
+}
+//    Justify
+.text--bp-lg--justify,
+.text--bp-lg--justified {
+  @include breakpoint-up(lg) {
+    text-align: justify;
+  }
+}
+//    Right
+.text--bp-lg--right {
+  @include breakpoint-up(lg) {
+    text-align: right;
+  }
+}
+//    Center
+.text--bp-lg--center {
+  @include breakpoint-up(lg) {
+    text-align: center;
+  }
+}
+
+// XL
+//    Left
+.text--bp-xl--left {
+  @include breakpoint-up(xl) {
+    text-align: left;
+  }
+}
+//    Justify
+.text--bp-xl--justify,
+.text--bp-xl--justified {
+  @include breakpoint-up(xl) {
+    text-align: justify;
+  }
+}
+//    Right
+.text--bp-xl--right {
+  @include breakpoint-up(xl) {
+    text-align: right;
+  }
+}
+//    Center
+.text--bp-xl--center {
+  @include breakpoint-up(xl) {
+    text-align: center;
+  }
 }

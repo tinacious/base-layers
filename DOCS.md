@@ -359,6 +359,15 @@ To get text that is XXL only on the XL breakpoint, you would use the following:
     .text--left
     .text--align-left
 
+Those apply to all breakpoints. The pattern is as follows:
+
+    .text--bp-<breakpoint>--<alignment>
+
+For example:
+
+    .text--bp-lg--center
+
+So it is very similar except it has an extra `--bp-XX--` value.
 
 ### Typography mixins
 
