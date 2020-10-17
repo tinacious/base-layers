@@ -362,6 +362,9 @@ To get text that is XXL only on the XL breakpoint, you would use the following:
     .text--left
     .text--align-left
 
+    .text--justify
+    .text--align-justify
+
 Those apply to all breakpoints. The pattern is as follows:
 
     .text--bp-<breakpoint>--<alignment>
@@ -448,11 +451,11 @@ For a grid with a container and a max width:
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-8">
-        Main area
+      Main area
     </div>
 
     <div class="col-xs-12 col-md-4">
-        Sidebar
+      Sidebar
     </div>
   </div>
 </div>
