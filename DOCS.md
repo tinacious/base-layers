@@ -77,6 +77,9 @@ $btn-tertiary-bg: #15b98c;
 $btn-disabled-opacity: 0.65;
 $btn-border-radius: 4px;
 
+$btn-layout-item-margin: 6px;
+$btn-layout-breakpoint: md;
+
 // Typography
   // 1.067 — Minor Second
   // 1.125 — Major Second

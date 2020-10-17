@@ -88,7 +88,7 @@
   margin-bottom: $btn-layout-item-margin;
 }
 
-@include breakpoint-up(md) {
+@include breakpoint-up($btn-layout-breakpoint) {
   .button-layout {
     display: flex;
     width: 100%;
