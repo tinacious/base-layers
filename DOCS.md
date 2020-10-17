@@ -612,6 +612,7 @@ To use the globals, import them:
 
 ## Examples
 
+- [Static example](https://base-layers.netlify.app)
 - Example with a custom grid
   - [View](https://1x10r.csb.app/)
   - [Edit](https://codesandbox.io/s/base-layers-custom-grid-1x10r)

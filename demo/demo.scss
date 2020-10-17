@@ -1,14 +1,17 @@
-@import './scss/defaults';
+// Import this everywhere before you use any mixins
+@import './base-layers-demo-config.scss';
+
 @import './scss/base-layers';
 @import './scss/globals';
 
 html {
-  font-size: 100%;
+  font-size: 110%;
 }
 
 body {
   line-height: 1.6;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Chalkboard', 'Comic Sans MS', sans-serif;
+  color: $btn-tertiary-bg;
 }
 
 img {
@@ -20,6 +23,7 @@ h1 {
   @include text--bold;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+  color: $btn-primary-bg;
 }
 
 h2 {
@@ -27,6 +31,7 @@ h2 {
   @include text--bold;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+  color: $btn-secondary-bg;
 }
 
 h3 {
