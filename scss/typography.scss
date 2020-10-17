@@ -27,22 +27,6 @@
 .text--xxxs {
   @include text--xxxs;
 }
-// RWD
-.text--bp-md--xxxs {
-  @include breakpoint-up(md) {
-    @include text--xxxs;
-  }
-}
-.text--bp-lg--xxxs {
-  @include breakpoint-up(lg) {
-    @include text--xxxs;
-  }
-}
-.text--bp-xl--xxxs {
-  @include breakpoint-up(xl) {
-    @include text--xxxs;
-  }
-}
 
 // XXS
 @mixin text--xxs {
@@ -52,21 +36,6 @@
 .text--xxs {
   @include text--xxs;
 }
-.text--bp-md--xxs {
-  @include breakpoint-up(md) {
-    @include text--xxs;
-  }
-}
-.text--bp-lg--xxs {
-  @include breakpoint-up(lg) {
-    @include text--xxs;
-  }
-}
-.text--bp-xl--xxs {
-  @include breakpoint-up(xl) {
-    @include text--xxs;
-  }
-}
 
 // XS
 @mixin text--xs {
@@ -74,22 +43,6 @@
 }
 .text--xs {
   @include text--xs;
-}
-// RWD
-.text--bp-md--xs {
-  @include breakpoint-up(md) {
-    @include text--xs;
-  }
-}
-.text--bp-lg--xs {
-  @include breakpoint-up(lg) {
-    @include text--xs;
-  }
-}
-.text--bp-xl--xs {
-  @include breakpoint-up(xl) {
-    @include text--xs;
-  }
 }
 
 // SM
@@ -100,22 +53,6 @@
 .text--sm {
   @include text--sm;
 }
-// RWD
-.text--bp-md--sm {
-  @include breakpoint-up(md) {
-    @include text--sm;
-  }
-}
-.text--bp-lg--sm {
-  @include breakpoint-up(lg) {
-    @include text--sm;
-  }
-}
-.text--bp-xl--sm {
-  @include breakpoint-up(xl) {
-    @include text--sm;
-  }
-}
 
 // MD
 @mixin text--md {
@@ -123,22 +60,6 @@
 }
 .text--md {
   @include text--md;
-}
-// RWD
-.text--bp-md--md {
-  @include breakpoint-up(md) {
-    @include text--md;
-  }
-}
-.text--bp-lg--md {
-  @include breakpoint-up(lg) {
-    @include text--md;
-  }
-}
-.text--bp-xl--md {
-  @include breakpoint-up(xl) {
-    @include text--md;
-  }
 }
 
 // LG
@@ -149,22 +70,6 @@
 .text--lg {
   @include text--lg;
 }
-// RWD
-.text--bp-md--lg {
-  @include breakpoint-up(md) {
-    @include text--lg;
-  }
-}
-.text--bp-lg--lg {
-  @include breakpoint-up(lg) {
-    @include text--lg;
-  }
-}
-.text--bp-xl--lg {
-  @include breakpoint-up(xl) {
-    @include text--lg;
-  }
-}
 
 // XL
 @mixin text--xl {
@@ -173,22 +78,6 @@
 }
 .text--xl {
   @include text--xl;
-}
-// RWD
-.text--bp-md--xl {
-  @include breakpoint-up(md) {
-    @include text--xl;
-  }
-}
-.text--bp-lg--xl {
-  @include breakpoint-up(lg) {
-    @include text--xl;
-  }
-}
-.text--bp-xl--xl {
-  @include breakpoint-up(xl) {
-    @include text--xl;
-  }
 }
 
 // XXL
@@ -199,22 +88,6 @@
 .text--xxl {
   @include text--xxl;
 }
-// RWD
-.text--bp-md--xxl {
-  @include breakpoint-up(md) {
-    @include text--xxl;
-  }
-}
-.text--bp-lg--xxl {
-  @include breakpoint-up(lg) {
-    @include text--xxl;
-  }
-}
-.text--bp-xl--xxl {
-  @include breakpoint-up(xl) {
-    @include text--xxl;
-  }
-}
 
 // XXXL
 @mixin text--xxxl {
@@ -224,6 +97,133 @@
 .text--xxxl {
   @include text--xxxl;
 }
+
+/* Responsive font sizes */
+// SM
+@include breakpoint-up(sm) {
+  .text--bp-sm--xxxs {
+    @include text--xxxs;
+  }
+  .text--bp-sm--xxs {
+    @include text--xxs;
+  }
+  .text--bp-sm--xs {
+    @include text--xs;
+  }
+  .text--bp-sm--sm {
+    @include text--sm;
+  }
+  .text--bp-sm--md {
+    @include text--md;
+  }
+  .text--bp-sm--lg {
+    @include text--lg;
+  }
+  .text--bp-sm--xl {
+    @include text--xl;
+  }
+  .text--bp-sm--xxl {
+    @include text--xxl;
+  }
+  .text--bp-sm--xxxl {
+    @include text--xxxl;
+  }
+}
+
+
+// MD
+@include breakpoint-up(md) {
+  .text--bp-md--xxxs {
+    @include text--xxxs;
+  }
+  .text--bp-md--xxs {
+    @include text--xxs;
+  }
+  .text--bp-md--xs {
+    @include text--xs;
+  }
+  .text--bp-md--sm {
+    @include text--sm;
+  }
+  .text--bp-md--md {
+    @include text--md;
+  }
+  .text--bp-md--lg {
+    @include text--lg;
+  }
+  .text--bp-md--xl {
+    @include text--xl;
+  }
+  .text--bp-md--xxl {
+    @include text--xxl;
+  }
+  .text--bp-md--xxxl {
+    @include text--xxxl;
+  }
+}
+
+// LG
+@include breakpoint-up(lg) {
+  .text--bp-lg--xxxs {
+    @include text--xxxs;
+  }
+  .text--bp-lg--xxs {
+    @include text--xxs;
+  }
+  .text--bp-lg--xs {
+    @include text--xs;
+  }
+  .text--bp-lg--sm {
+    @include text--sm;
+  }
+  .text--bp-lg--md {
+    @include text--md;
+  }
+  .text--bp-lg--lg {
+    @include text--lg;
+  }
+  .text--bp-lg--xl {
+    @include text--xl;
+  }
+  .text--bp-lg--xxl {
+    @include text--xxl;
+  }
+  .text--bp-lg--xxxl {
+    @include text--xxxl;
+  }
+}
+
+// XL
+@include breakpoint-up(xl) {
+  .text--bp-xl--xxxs {
+    @include text--xxxs;
+  }
+  .text--bp-xl--xxs {
+    @include text--xxs;
+  }
+  .text--bp-xl--xs {
+    @include text--xs;
+  }
+  .text--bp-xl--sm {
+    @include text--sm;
+  }
+  .text--bp-xl--md {
+    @include text--md;
+  }
+  .text--bp-xl--lg {
+    @include text--lg;
+  }
+  .text--bp-xl--xl {
+    @include text--xl;
+  }
+  .text--bp-xl--xxl {
+    @include text--xxl;
+  }
+  .text--bp-xl--xxxl {
+    @include text--xxxl;
+  }
+}
+
 
 /* font styles */
 // Text style utils
@@ -307,110 +307,85 @@
 /* Responsive Text alignment */
 
 // SM
-//    Left
-.text--bp-sm--left {
-  @include breakpoint-up(sm) {
+@include breakpoint-up(sm) {
+  // Left
+  .text--bp-sm--left {
     text-align: left;
   }
-}
-//    Justify
-.text--bp-sm--justify,
-.text--bp-sm--justified {
-  @include breakpoint-up(sm) {
+  // Justify
+  .text--bp-sm--justify,
+  .text--bp-sm--justified {
     text-align: justify;
   }
-}
-//    Right
-.text--bp-sm--right {
-  @include breakpoint-up(sm) {
+  // Right
+  .text--bp-sm--right {
     text-align: right;
   }
-}
-//    Center
-.text--bp-sm--center {
-  @include breakpoint-up(sm) {
+  // Center
+  .text--bp-sm--center {
     text-align: center;
   }
 }
 
 // MD
-//    Left
-.text--bp-md--left {
-  @include breakpoint-up(md) {
+@include breakpoint-up(md) {
+  // Left
+  .text--bp-md--left {
     text-align: left;
   }
-}
-//    Right
-.text--bp-md--right {
-  @include breakpoint-up(md) {
+  // Justify
+  .text--bp-md--justify,
+  .text--bp-md--justified {
+    text-align: justify;
+  }
+  // Right
+  .text--bp-md--right {
     text-align: right;
   }
-}
-//    Center
-.text--bp-md--center {
-  @include breakpoint-up(md) {
+  // Center
+  .text--bp-md--center {
     text-align: center;
   }
 }
 
-//    Justify
-.text--bp-md--justify,
-.text--bp-md--justified {
-  @include breakpoint-up(md) {
-    text-align: justify;
-  }
-}
-
 // LG
-//    Left
-.text--bp-lg--left {
-  @include breakpoint-up(lg) {
+@include breakpoint-up(lg) {
+  // Left
+  .text--bp-lg--left {
     text-align: left;
   }
-}
-//    Justify
-.text--bp-lg--justify,
-.text--bp-lg--justified {
-  @include breakpoint-up(lg) {
+  // Justify
+  .text--bp-lg--justify,
+  .text--bp-lg--justified {
     text-align: justify;
   }
-}
-//    Right
-.text--bp-lg--right {
-  @include breakpoint-up(lg) {
+  // Right
+  .text--bp-lg--right {
     text-align: right;
   }
-}
-//    Center
-.text--bp-lg--center {
-  @include breakpoint-up(lg) {
+  // Center
+  .text--bp-lg--center {
     text-align: center;
   }
 }
 
 // XL
-//    Left
-.text--bp-xl--left {
-  @include breakpoint-up(xl) {
+@include breakpoint-up(xl) {
+  // Left
+  .text--bp-xl--left {
     text-align: left;
   }
-}
-//    Justify
-.text--bp-xl--justify,
-.text--bp-xl--justified {
-  @include breakpoint-up(xl) {
+  // Justify
+  .text--bp-xl--justify,
+  .text--bp-xl--justified {
     text-align: justify;
   }
-}
-//    Right
-.text--bp-xl--right {
-  @include breakpoint-up(xl) {
+  // Right
+  .text--bp-xl--right {
     text-align: right;
   }
-}
-//    Center
-.text--bp-xl--center {
-  @include breakpoint-up(xl) {
+  // Center
+  .text--bp-xl--center {
     text-align: center;
   }
 }

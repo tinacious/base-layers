@@ -30,7 +30,15 @@
 
 // For breakpoints
 //    .col-<bp>-1 -> .col-<bp>-12
-@include make-columns-for-breakpoint(sm);
-@include make-columns-for-breakpoint(md);
-@include make-columns-for-breakpoint(lg);
-@include make-columns-for-breakpoint(xl);
+@include breakpoint-up(sm) {
+  @include make-columns-for-breakpoint(sm);
+}
+@include breakpoint-up(md) {
+  @include make-columns-for-breakpoint(md);
+}
+@include breakpoint-up(lg) {
+  @include make-columns-for-breakpoint(lg);
+}
+@include breakpoint-up(xl) {
+  @include make-columns-for-breakpoint(xl);
+}

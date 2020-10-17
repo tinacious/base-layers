@@ -92,9 +92,7 @@
 
   @for $i from 1 through $columns {
     .#{$classname}-#{$breakpoint-key}-#{$i} {
-      @include breakpoint-up($breakpoint-key) {
-        @include column($i, $gutter, $total-columns: $columns);
-      }
+      @include column($i, $gutter, $total-columns: $columns);
     }
   }
 }
