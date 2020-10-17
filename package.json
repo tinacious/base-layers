@@ -4,9 +4,9 @@
   "description": "The foundation of your website's outfit 👙",
   "main": "scss/base-layers.scss",
   "scripts": {
-    "start": "parcel demo.html -p 8008 --out-dir tmp",
+    "start": "parcel index.html -p 8008 --out-dir tmp",
     "postinstall": "npm run build",
-    "dist": "parcel build demo.html --out-dir docs --public-url ./",
+    "dist": "parcel build index.html --out-dir docs --public-url ./",
     "build": "node-sass scss/base-layers.scss lib/base-layers.css"
   },
   "author": "Tina Holly <info@tinaciousdesign.com>",
