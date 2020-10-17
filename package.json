@@ -4,6 +4,7 @@
   "description": "The foundation of your website's outfit 👙",
   "main": "scss/base-layers.scss",
   "scripts": {
+    "start": "parcel demo.html -p 8008 --out-dir tmp",
     "postinstall": "npm run build",
     "build": "node-sass scss/base-layers.scss lib/base-layers.css"
   },
@@ -20,5 +21,9 @@
   "license": "ISC",
   "dependencies": {
     "node-sass": "^4.14.1"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "sass": "^1.27.0"
   }
 }

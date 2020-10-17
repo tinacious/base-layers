@@ -1,0 +1,44 @@
+@import './scss/defaults';
+@import './scss/base-layers';
+@import './scss/globals';
+
+html {
+  font-size: 100%;
+}
+
+body {
+  line-height: 1.6;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  @include text--xl;
+  @include text--bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  @include text--lg;
+  @include text--bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  @include text--md;
+  @include text--bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  @include text--sm;
+  @include text--bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
