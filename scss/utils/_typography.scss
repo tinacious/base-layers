@@ -99,3 +99,366 @@
 @mixin text--align-justify {
   text-align: justify;
 }
+
+@mixin make-default-typography($namespace: '') {
+
+  /* font sizes */
+  // XXXS
+  .#{$namespace}text--xxxs {
+    @include text--xxxs;
+  }
+
+  // XXS
+  .#{$namespace}text--xxs {
+    @include text--xxs;
+  }
+
+  // XS
+  .#{$namespace}text--xs {
+    @include text--xs;
+  }
+
+  // SM
+  // Default font size
+  .#{$namespace}text--sm {
+    @include text--sm;
+  }
+
+  // MD
+  .#{$namespace}text--md {
+    @include text--md;
+  }
+
+  // LG
+  .#{$namespace}text--lg {
+    @include text--lg;
+  }
+
+  // XL
+  .#{$namespace}text--xl {
+    @include text--xl;
+  }
+
+  // XXL
+  .#{$namespace}text--xxl {
+    @include text--xxl;
+  }
+
+  // XXXL
+  .#{$namespace}text--xxxl {
+    @include text--xxxl;
+  }
+
+  /* Responsive font sizes */
+  // SM
+  @include breakpoint-up(sm) {
+    .#{$namespace}text--bp-sm--xxxs {
+      @include text--xxxs;
+    }
+
+    .#{$namespace}text--bp-sm--xxs {
+      @include text--xxs;
+    }
+
+    .#{$namespace}text--bp-sm--xs {
+      @include text--xs;
+    }
+
+    .#{$namespace}text--bp-sm--sm {
+      @include text--sm;
+    }
+
+    .#{$namespace}text--bp-sm--md {
+      @include text--md;
+    }
+
+    .#{$namespace}text--bp-sm--lg {
+      @include text--lg;
+    }
+
+    .#{$namespace}text--bp-sm--xl {
+      @include text--xl;
+    }
+
+    .#{$namespace}text--bp-sm--xxl {
+      @include text--xxl;
+    }
+
+    .#{$namespace}text--bp-sm--xxxl {
+      @include text--xxxl;
+    }
+  }
+
+
+  // MD
+  @include breakpoint-up(md) {
+    .#{$namespace}text--bp-md--xxxs {
+      @include text--xxxs;
+    }
+
+    .#{$namespace}text--bp-md--xxs {
+      @include text--xxs;
+    }
+
+    .#{$namespace}text--bp-md--xs {
+      @include text--xs;
+    }
+
+    .#{$namespace}text--bp-md--sm {
+      @include text--sm;
+    }
+
+    .#{$namespace}text--bp-md--md {
+      @include text--md;
+    }
+
+    .#{$namespace}text--bp-md--lg {
+      @include text--lg;
+    }
+
+    .#{$namespace}text--bp-md--xl {
+      @include text--xl;
+    }
+
+    .#{$namespace}text--bp-md--xxl {
+      @include text--xxl;
+    }
+
+    .#{$namespace}text--bp-md--xxxl {
+      @include text--xxxl;
+    }
+  }
+
+  // LG
+  @include breakpoint-up(lg) {
+    .#{$namespace}text--bp-lg--xxxs {
+      @include text--xxxs;
+    }
+
+    .#{$namespace}text--bp-lg--xxs {
+      @include text--xxs;
+    }
+
+    .#{$namespace}text--bp-lg--xs {
+      @include text--xs;
+    }
+
+    .#{$namespace}text--bp-lg--sm {
+      @include text--sm;
+    }
+
+    .#{$namespace}text--bp-lg--md {
+      @include text--md;
+    }
+
+    .#{$namespace}text--bp-lg--lg {
+      @include text--lg;
+    }
+
+    .#{$namespace}text--bp-lg--xl {
+      @include text--xl;
+    }
+
+    .#{$namespace}text--bp-lg--xxl {
+      @include text--xxl;
+    }
+
+    .#{$namespace}text--bp-lg--xxxl {
+      @include text--xxxl;
+    }
+  }
+
+  // XL
+  @include breakpoint-up(xl) {
+    .#{$namespace}text--bp-xl--xxxs {
+      @include text--xxxs;
+    }
+
+    .#{$namespace}text--bp-xl--xxs {
+      @include text--xxs;
+    }
+
+    .#{$namespace}text--bp-xl--xs {
+      @include text--xs;
+    }
+
+    .#{$namespace}text--bp-xl--sm {
+      @include text--sm;
+    }
+
+    .#{$namespace}text--bp-xl--md {
+      @include text--md;
+    }
+
+    .#{$namespace}text--bp-xl--lg {
+      @include text--lg;
+    }
+
+    .#{$namespace}text--bp-xl--xl {
+      @include text--xl;
+    }
+
+    .#{$namespace}text--bp-xl--xxl {
+      @include text--xxl;
+    }
+
+    .#{$namespace}text--bp-xl--xxxl {
+      @include text--xxxl;
+    }
+  }
+
+
+  /* font styles */
+  // Text style utils
+  .#{$namespace}text--bold {
+    @include text--bold;
+  }
+
+  .#{$namespace}text--semi-bold {
+    @include text--semi-bold;
+  }
+
+  .#{$namespace}text--italic {
+    @include text--italic;
+  }
+
+  .#{$namespace}text--oblique {
+    @include text--oblique;
+  }
+
+  .#{$namespace}text--underline {
+    @include text--underline;
+  }
+
+  /* Text Alignment */
+
+  // Center
+  .#{$namespace}text--align-center,
+  .#{$namespace}text--center {
+    @include text--align-center;
+  }
+
+
+  // Right
+  .#{$namespace}text--align-right,
+  .#{$namespace}text--right {
+    @include text--align-right;
+  }
+
+
+  // Left
+  .#{$namespace}text--align-left,
+  .#{$namespace}text--left {
+    @include text--align-left;
+  }
+
+
+  // Justified
+  .#{$namespace}text--align-justify,
+  .#{$namespace}text--justify {
+    @include text--align-justify;
+  }
+
+
+  /* Responsive Text alignment */
+
+  // SM
+  @include breakpoint-up(sm) {
+
+    // Left
+    .#{$namespace}text--bp-sm--left {
+      text-align: left;
+    }
+
+    // Justify
+    .#{$namespace}text--bp-sm--justify,
+    .#{$namespace}text--bp-sm--justified {
+      text-align: justify;
+    }
+
+    // Right
+    .#{$namespace}text--bp-sm--right {
+      text-align: right;
+    }
+
+    // Center
+    .#{$namespace}text--bp-sm--center {
+      text-align: center;
+    }
+  }
+
+  // MD
+  @include breakpoint-up(md) {
+
+    // Left
+    .#{$namespace}text--bp-md--left {
+      text-align: left;
+    }
+
+    // Justify
+    .#{$namespace}text--bp-md--justify,
+    .#{$namespace}text--bp-md--justified {
+      text-align: justify;
+    }
+
+    // Right
+    .#{$namespace}text--bp-md--right {
+      text-align: right;
+    }
+
+    // Center
+    .#{$namespace}text--bp-md--center {
+      text-align: center;
+    }
+  }
+
+  // LG
+  @include breakpoint-up(lg) {
+
+    // Left
+    .#{$namespace}text--bp-lg--left {
+      text-align: left;
+    }
+
+    // Justify
+    .#{$namespace}text--bp-lg--justify,
+    .#{$namespace}text--bp-lg--justified {
+      text-align: justify;
+    }
+
+    // Right
+    .#{$namespace}text--bp-lg--right {
+      text-align: right;
+    }
+
+    // Center
+    .#{$namespace}text--bp-lg--center {
+      text-align: center;
+    }
+  }
+
+  // XL
+  @include breakpoint-up(xl) {
+
+    // Left
+    .#{$namespace}text--bp-xl--left {
+      text-align: left;
+    }
+
+    // Justify
+    .#{$namespace}text--bp-xl--justify,
+    .#{$namespace}text--bp-xl--justified {
+      text-align: justify;
+    }
+
+    // Right
+    .#{$namespace}text--bp-xl--right {
+      text-align: right;
+    }
+
+    // Center
+    .#{$namespace}text--bp-xl--center {
+      text-align: center;
+    }
+  }
+}

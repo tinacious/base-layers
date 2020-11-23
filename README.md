@@ -7,6 +7,7 @@
 
 - [About Base Layers](#about-base-layers)
   - [What's included?](#whats-included)
+    - [Namespacing](#namespacing)
 - [Usage](#usage)
   - [Installation](#installation)
   - [API Documentation](#api-documentation)
@@ -35,9 +36,16 @@ Utilities to help you with:
 
 - a configurable, responsive grid
 - spacing elements, including margins and padding
+  - supports namespacing
 - styling buttons
 - typography utilities
+  - supports namespacing
 - responsive design utilities
+
+
+#### Namespacing
+
+Using the namespace mixins is one strategy to leverage the framework while building an embedded web application, for example, a Chrome extension that injects UI onto a website in a way to make sure you are using a unique prefix for your class names. For example, instead of `p-1` you would get `my-app-u-p-1` if you used the namespace `my-app-u-`. See the [documentation](https://github.com/tinacious/base-layers/blob/main/DOCS.md) for specifics.
 
 
 ## Usage
