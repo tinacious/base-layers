@@ -1,6 +1,7 @@
 @import './defaults';
 @import './utils/math';
 @import './utils/rwd';
+@import './utils/typography';
 
 // https://type-scale.com
 //
@@ -21,79 +22,47 @@
 
 /* font sizes */
 // XXXS
-@mixin text--xxxs {
-  font-size: #{pow($type-scale, -3)}rem;
-}
 .text--xxxs {
   @include text--xxxs;
 }
 
 // XXS
-@mixin text--xxs {
-  font-size: #{pow($type-scale, -2)}rem;
-}
-// RWD
 .text--xxs {
   @include text--xxs;
 }
 
 // XS
-@mixin text--xs {
-  font-size: #{pow($type-scale, -1)}rem;
-}
 .text--xs {
   @include text--xs;
 }
 
 // SM
 // Default font size
-@mixin text--sm {
-  font-size: 1rem;
-}
 .text--sm {
   @include text--sm;
 }
 
 // MD
-@mixin text--md {
-  font-size: #{pow($type-scale, 1)}rem;
-}
 .text--md {
   @include text--md;
 }
 
 // LG
-@mixin text--lg {
-  font-size: #{pow($type-scale, 2)}rem;
-  line-height: 1.15;
-}
 .text--lg {
   @include text--lg;
 }
 
 // XL
-@mixin text--xl {
-  font-size: #{pow($type-scale, 3)}rem;
-  line-height: 1.15;
-}
 .text--xl {
   @include text--xl;
 }
 
 // XXL
-@mixin text--xxl {
-  font-size: #{pow($type-scale, 4)}rem;
-  line-height: 1.15;
-}
 .text--xxl {
   @include text--xxl;
 }
 
 // XXXL
-@mixin text--xxxl {
-  font-size: #{pow($type-scale, 5)}rem;
-  line-height: 1.15;
-}
 .text--xxxl {
   @include text--xxxl;
 }
@@ -227,37 +196,22 @@
 
 /* font styles */
 // Text style utils
-@mixin text--bold {
-  font-weight: 700;
-}
 .text--bold {
   @include text--bold;
 }
 
-@mixin text--semi-bold {
-  font-weight: 500;
-}
 .text--semi-bold {
   @include text--semi-bold;
 }
 
-@mixin text--italic {
-  font-style: italic;
-}
 .text--italic {
   @include text--italic;
 }
 
-@mixin text--oblique {
-  font-style: oblique;
-}
 .text--oblique {
   @include text--oblique;
 }
 
-@mixin text--underline {
-  text-decoration: underline;
-}
 .text--underline {
   @include text--underline;
 }
@@ -265,9 +219,6 @@
 /* Text Alignment */
 
 // Center
-@mixin text--align-center {
-  text-align: center;
-}
 .text--align-center,
 .text--center {
   @include text--align-center;
@@ -275,9 +226,6 @@
 
 
 // Right
-@mixin text--align-right {
-  text-align: right;
-}
 .text--align-right,
 .text--right {
   @include text--align-right;
@@ -285,9 +233,6 @@
 
 
 // Left
-@mixin text--align-left {
-  text-align: left;
-}
 .text--align-left,
 .text--left {
   @include text--align-left;
@@ -295,9 +240,6 @@
 
 
 // Justified
-@mixin text--align-justify {
-  text-align: justify;
-}
 .text--align-justify,
 .text--justify {
   @include text--align-justify;

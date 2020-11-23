@@ -1,73 +1,33 @@
 @import './defaults';
 @import './utils/rwd.scss';
+@import './utils/buttons';
 
 /**
   Buttons
  */
 
-@mixin btn {
-  padding: 0.5em 1em;
-  line-height: 1;
-  border: 0;
-  margin: 0;
-  border-radius: $btn-border-radius;
-  display: inline-block;
-  font-family: $btn-font;
-  font-size: inherit;
-  text-decoration: none;
-  cursor: pointer;
-}
+
 .btn {
   @include btn;
 }
 
-// Primary
-@mixin btn--primary {
-  color: $btn-primary-fg;
-  background: $btn-primary-bg;
-}
 .btn--primary {
   @include btn--primary;
 }
 
-// Secondary
-@mixin btn--secondary {
-  color: $btn-secondary-fg;
-  background: $btn-secondary-bg;
-}
 .btn--secondary {
   @include btn--secondary;
 }
 
-// Tertiary
-@mixin btn--tertiary {
-  color: $btn-tertiary-fg;
-  background: $btn-tertiary-bg;
-}
+
 .btn--tertiary {
   @include btn--tertiary;
 }
 
-// Disabled
-@mixin btn--disabled {
-  opacity: $btn-disabled-opacity;
-  cursor: default;
-}
 .btn--disabled {
   @include btn--disabled;
 }
 
-// Unstyled
-@mixin btn--unstyled {
-  display: block;
-  padding: 0;
-  border: 0;
-  margin: 0;
-  border-radius: 0;
-  background: transparent;
-  line-height: inherit;
-  font: inherit;
-}
 .btn--unstyled {
   @include btn--unstyled;
 }
