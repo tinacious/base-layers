@@ -642,3 +642,6 @@ To use the globals, import them:
 - Vue.js
   - [View](https://qe2m1.csb.app/)
   - [Edit](https://codesandbox.io/s/base-layers-vuejs-example-qe2m1)
+- Example with namespacing
+  - [View](https://u3fs8.csb.app/)
+  - [Edit](https://codesandbox.io/s/base-layers-using-namespace-mixins-u3fs8?file=/styles.scss)
