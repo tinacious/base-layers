@@ -10,14 +10,14 @@
 // Strip away all your styles
 @import './reset.scss';
 
-// Components
+// Components & HTML/CSS helper classes
 @import './buttons.scss';
 @import './grid.scss';
-
-
-// HTML/CSS helper classes
 @import './typography.scss';
 @import './spacing.scss';
-// Sass Mixins & utils
+
+// Sass Mixins & utils (no classes)
+@import './utils/typography.scss';
+@import './utils/buttons.scss';
 @import './utils/rwd.scss';
 @import './utils/grid.scss';

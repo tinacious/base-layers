@@ -1,0 +1,101 @@
+@import '../defaults';
+@import '../utils/math';
+@import '../utils/rwd';
+
+// https://type-scale.com
+//
+// 1.067 — Minor Second
+// 1.125 — Major Second
+// 1.200 — Minor Third
+// 1.250 — Major Third
+// 1.333 — Perfect Fourth
+// 1.414 — Augmented Fourth
+// 1.500 — Perfect Fifth
+// 1.618 — Golden Ratio
+
+// Uses $type-scale
+
+// font sizes
+@mixin text--xxxs {
+  font-size: #{pow($type-scale, -3)}rem;
+}
+
+@mixin text--xxs {
+  font-size: #{pow($type-scale, -2)}rem;
+}
+
+@mixin text--xxs {
+  font-size: #{pow($type-scale, -2)}rem;
+}
+
+@mixin text--xs {
+  font-size: #{pow($type-scale, -1)}rem;
+}
+
+@mixin text--sm {
+  font-size: 1rem; // Default font size
+}
+
+@mixin text--md {
+  font-size: #{pow($type-scale, 1)}rem;
+}
+
+@mixin text--lg {
+  font-size: #{pow($type-scale, 2)}rem;
+  line-height: 1.15;
+}
+
+@mixin text--xl {
+  font-size: #{pow($type-scale, 3)}rem;
+  line-height: 1.15;
+}
+
+@mixin text--xxl {
+  font-size: #{pow($type-scale, 4)}rem;
+  line-height: 1.15;
+}
+
+@mixin text--xxxl {
+  font-size: #{pow($type-scale, 5)}rem;
+  line-height: 1.15;
+}
+
+
+// font styles
+@mixin text--bold {
+  font-weight: 700;
+}
+
+@mixin text--semi-bold {
+  font-weight: 500;
+}
+
+@mixin text--italic {
+  font-style: italic;
+}
+
+@mixin text--oblique {
+  font-style: oblique;
+}
+
+@mixin text--underline {
+  text-decoration: underline;
+}
+
+
+// Text Alignment
+@mixin text--align-center {
+  text-align: center;
+}
+
+@mixin text--align-right {
+  text-align: right;
+}
+
+@mixin text--align-left {
+  text-align: left;
+}
+
+@mixin text--align-justify {
+  text-align: justify;
+}
