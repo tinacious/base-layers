@@ -11,6 +11,9 @@
   - [Installation](#installation)
   - [API Documentation](#api-documentation)
 
+
+![Sass (SCSS) CI](https://github.com/tinacious/base-layers/workflows/Sass%20(SCSS)%20CI/badge.svg)
+
 ## About Base Layers
 
 **Base Layers** provides utility classes and Sass mixins (SCSS) to help you build out your site.
