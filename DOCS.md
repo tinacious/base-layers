@@ -241,7 +241,17 @@ So it's the same as above except with an extra `-breakpoint-` value:
 
 ### Spacing mixins
 
-There are no mixins for spacing and you wouuld have to define each `margin` and `padding` value yourself.
+You can choose to not include the spacing component and just use the mixin, in which case you can provide a namespace value to scope your CSS:
+
+```scss
+import 'path/to/node_modules/base-layers/scss/utils/spacing';
+
+@mixin make-default-spacing('acme-ltd-u-');
+```
+
+This will result in namespaced classes, e.g. `.acme-ltd-u-pt-0`.
+
+You are also welcome to leverage the `$spacer` variable.
 
 ```scss
 .box {
@@ -340,6 +350,16 @@ So it is very similar except it has an extra `--bp-XX--` value.
 To get text that is XXL only on the XL breakpoint, you would use the following:
 
     .text--bp-xl--xxl
+
+You can choose to not include the typography component and just use the mixins, in which case you can provide a namespace value to scope your CSS:
+
+```scss
+import 'path/to/node_modules/base-layers/scss/utils/typography';
+
+@mixin make-default-typography('acme-ltd-u-');
+```
+
+This will result in namespaced classes, e.g. `.acme-ltd-u-text--xs`.
 
 
 #### Text styling

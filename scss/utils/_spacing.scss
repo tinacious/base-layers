@@ -14,7 +14,7 @@ $spacing-types: (
   'margin': 'm',
 );
 
-@mixin make-default-spacing($max: $max-spacing-multiplier, $namespace: '') {
+@mixin make-default-spacing($namespace: '', $max: $max-spacing-multiplier) {
   @for $i from 0 through $max {
 
     @each $spacing-type, $spacing-label in $spacing-types {
