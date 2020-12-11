@@ -88,9 +88,37 @@ a {
   }
 }
 
+code {
+  background: #efefef;
+  padding: 0.2em 0.5em;
+  font-family: Courier,  monospace;
+}
+
+pre {
+  font-family: Courier,  monospace;
+}
+
 .demo-title-description {
   color: $btn-tertiary-bg;
 }
 .demo-text-size {
   color: $btn-primary-bg;
+}
+
+.box {
+  padding: $spacer * 2;
+  color: #fff;
+  min-height: 200px;
+}
+
+.u-bg-primary {
+  background: $btn-primary-bg;
+}
+
+.u-bg-secondary {
+  background: $btn-secondary-bg;
+}
+
+.u-bg-tertiary {
+  background: $btn-tertiary-bg;
 }

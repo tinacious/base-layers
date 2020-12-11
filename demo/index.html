@@ -250,6 +250,57 @@
       </div> <!-- /.col-md-10 -->
     </div> <!-- /.row -->
 
+    <!-- Grid Column Offsets -->
+    <section class="pv-2 pv-md-4">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>Grid Column Offsets</h2>
+
+          <p class="text--md">
+            You can use <code class="text--xs">.col-&lt;bp&gt;-push-&lt;number&gt;</code>
+            to push and pull columns. This can be used to center a layout, e.g.
+            a 10/12 centered layout, or to create an overlapping magazine-style layout.
+          </p>
+          <p class="text--xs">
+            Creating a 10/12 centered layout is easier without using offsets,
+            you can add the class <code class="text--xxs">row--center</code>, e.g.
+            <code class="text--xxs">row row--center</code> like the font size section above.
+          </p>
+          <p class="text--md">
+            You can see the columns layout with the <a href="https://chrome.google.com/webstore/detail/base-layers/fhkhleopmmdiokahobpnchddheokcldd" target="_blank" rel="noopener">
+              Base Layers Chrome extension
+            </a>.
+          </p>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-xs-12 col-md-3 col-md-push-1">
+          <div class="box u-bg-primary mv-2">
+            <pre class="text--xs">col-xs-12 col-md-3 col-md-push-1</pre>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-4 col-md-pull-1">
+          <div class="box u-bg-secondary mv-2 mt-md-10">
+            <pre class="text--xs">col-xs-12 col-md-4 col-md-pull-1</pre>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-4 col-md-pull-1">
+          <div class="box u-bg-tertiary mv-2 mt-md-20">
+            <pre class="text--xs">col-xs-12 col-md-4 col-md-pull-1</pre>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-3 col-md-pull-2">
+          <div class="box u-bg-primary mv-2 mt-md-30">
+            <pre class="text--xs">col-xs-12 col-md-3 col-md-pull-2</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
 </body>
 </html>
