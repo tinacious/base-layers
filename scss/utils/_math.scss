@@ -1,3 +1,4 @@
+@use 'sass:math';
 
 // Source (partial): https://gist.github.com/davidkpiano/ad6e6771df050ff3727f
 @function pow($number, $exp) {
@@ -16,7 +17,7 @@
 
   @else if $exp < 0 {
     @for $i from 1 through -$exp {
-      $value: $value / $number;
+      $value: math.div($value, $number);
     }
   }
 
