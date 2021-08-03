@@ -1,13 +1,13 @@
 {
   "name": "base-layers",
-  "version": "1.3.1",
+  "version": "2.0.0",
   "description": "The foundation of your website's outfit 👙",
   "main": "scss/base-layers.scss",
   "scripts": {
     "start": "parcel demo/index.html -p 8008 --out-dir tmp",
     "postinstall": "npm run build",
     "dist": "parcel build demo/index.html --out-dir docs --public-url ./",
-    "build": "node-sass scss/base-layers.scss lib/base-layers.css"
+    "build": "sass scss/base-layers.scss lib/base-layers.css"
   },
   "author": "Tina Holly <info@tinaciousdesign.com>",
   "repository": {
@@ -21,10 +21,9 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "node-sass": "^4.14.1"
+    "sass": "^1.37.2"
   },
   "devDependencies": {
-    "parcel": "^1.12.4",
-    "sass": "^1.27.0"
+    "parcel": "^1.12.4"
   }
 }

@@ -1,8 +1,11 @@
+@use 'sass:math'; // dart-sass util to help with math
+
 // Import this everywhere before you use any mixins
 @import './base-layers-demo-config.scss';
 
 @import './scss/base-layers';
 @import './scss/globals';
+
 
 html {
   font-size: 110%;
@@ -69,7 +72,7 @@ li {
     display: block;
     content: ' ';
     position: absolute;
-    top: $bullet-size / 1.4;
+    top: math.div($bullet-size, 1.4);
     left: -2em;
     transform: translateY(-50%);
     background: center center no-repeat url('https://github.com/tinacious/base-layers/raw/main/assets/tank-top.png');
