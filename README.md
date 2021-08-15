@@ -11,6 +11,7 @@
 - [Usage](#usage)
   - [Installation](#installation)
   - [API Documentation](#api-documentation)
+- [Design Resources](#design-resources)
 
 
 ![Sass (SCSS) CI](https://github.com/tinacious/base-layers/workflows/Sass%20(SCSS)%20CI/badge.svg)
@@ -57,3 +58,10 @@ Using the namespace mixins is one strategy to leverage the framework while build
 ### API Documentation
 
 Read the [documentation](https://github.com/tinacious/base-layers/blob/main/DOCS.md).
+
+
+## Design Resources
+
+Some Figma frames with grid styles have been created to help make designer-developer collaboration faster.
+
+🎨 [Access the Figma project here](https://www.figma.com/file/p0c41xkunDsLZ67VWJZtFk/Grid)
