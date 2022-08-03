@@ -15,6 +15,7 @@
     - [Text styling](#text-styling)
     - [Text alignment](#text-alignment)
   - [Typography mixins](#typography-mixins)
+- [Colours](#colours)
 - [Grid](#grid)
   - [Container](#container)
   - [Rows](#rows)
@@ -79,6 +80,99 @@ $btn-border-radius: 4px;
 
 $btn-layout-item-margin: 6px;
 $btn-layout-breakpoint: md;
+
+// Colours
+// Generated from base colours with: https://www.tailwindshades.com
+$bl-pink-50   : #FFEBF5;
+$bl-pink-100  : #FFD6EB;
+$bl-pink-200  : #FFADD6;
+$bl-pink-300  : #FF85C2;
+$bl-pink-400  : #FF5CAD;
+$bl-pink-500  : #FF3399;
+$bl-pink-600  : #FA007D;
+$bl-pink-700  : #C20061;
+$bl-pink-800  : #8A0045;
+$bl-pink-900  : #520029;
+$bl-purple-50 : #AA93F3;
+$bl-purple-100: #9C81F1;
+$bl-purple-200: #7F5CEC;
+$bl-purple-300: #6237E8;
+$bl-purple-400: #4919DE;
+$bl-purple-500: #3D15B9;
+$bl-purple-600: #2C0F87;
+$bl-purple-700: #1C0A54;
+$bl-purple-800: #0B0422;
+$bl-purple-900: #000000;
+$bl-green-50  : #93F3D8;
+$bl-green-100 : #81F1D2;
+$bl-green-200 : #5CECC5;
+$bl-green-300 : #37E8B8;
+$bl-green-400 : #19DEA8;
+$bl-green-500 : #15B98C;
+$bl-green-600 : #0F8766;
+$bl-green-700 : #0A5440;
+$bl-green-800 : #04221A;
+$bl-green-900 : #000000;
+$bl-grey-50   : #D7D7D7;
+$bl-grey-100  : #CACACA;
+$bl-grey-200  : #B1B1B1;
+$bl-grey-300  : #979797;
+$bl-grey-400  : #7E7E7E;
+$bl-grey-500  : #646464;
+$bl-grey-600  : #4B4B4B;
+$bl-grey-700  : #313131;
+$bl-grey-800  : #1A1A1A;
+$bl-grey-900  : #030303;
+
+
+$colour-palette: (
+  // Pink
+  'pink-50'   : $bl-pink-50,
+  'pink-100'  : $bl-pink-100,
+  'pink-200'  : $bl-pink-200,
+  'pink-300'  : $bl-pink-300,
+  'pink-400'  : $bl-pink-400,
+  'pink-500'  : $bl-pink-500,
+  'pink-600'  : $bl-pink-600,
+  'pink-700'  : $bl-pink-700,
+  'pink-800'  : $bl-pink-800,
+  'pink-900'  : $bl-pink-900,
+  // Purple
+  'purple-50' : $bl-purple-50,
+  'purple-100': $bl-purple-100,
+  'purple-200': $bl-purple-200,
+  'purple-300': $bl-purple-300,
+  'purple-400': $bl-purple-400,
+  'purple-500': $bl-purple-500,
+  'purple-600': $bl-purple-600,
+  'purple-700': $bl-purple-700,
+  'purple-800': $bl-purple-800,
+  'purple-900': $bl-purple-900,
+  // Green
+  'green-50'  : $bl-green-50,
+  'green-100' : $bl-green-100,
+  'green-200' : $bl-green-200,
+  'green-300' : $bl-green-300,
+  'green-400' : $bl-green-400,
+  'green-500' : $bl-green-500,
+  'green-600' : $bl-green-600,
+  'green-700' : $bl-green-700,
+  'green-800' : $bl-green-800,
+  'green-900' : $bl-green-900,
+  // Grey
+  'white'     : #fff,
+  'black'     : #000,
+  'grey-50'   : $bl-grey-50,
+  'grey-100'  : $bl-grey-100,
+  'grey-200'  : $bl-grey-200,
+  'grey-300'  : $bl-grey-300,
+  'grey-400'  : $bl-grey-400,
+  'grey-500'  : $bl-grey-500,
+  'grey-600'  : $bl-grey-600,
+  'grey-700'  : $bl-grey-700,
+  'grey-800'  : $bl-grey-800,
+  'grey-900'  : $bl-grey-900
+);
 
 // Typography
   // 1.067 — Minor Second
@@ -424,6 +518,113 @@ There are similar mixins available:
 @include text--align-left;
 @include text--align-justify;
 ```
+
+
+## Colours
+
+Customize the `$colour-palette`, e.g.:
+
+```scss
+$colour-palette: (
+  // Pink
+  'pink-500'   : #FF3399,
+  'pink-600'   : #FA007D,
+  'pink-700'   : #C20061
+);
+```
+
+This colour palette can be as big as you want. Both a foreground and background class will be generated for each colour, e.g.:
+
+- `bg-pink-500`
+- `bg-pink-600`
+- `bg-pink-700`
+- `fg-pink-500`
+- `fg-pink-600`
+- `fg-pink-700`
+
+See a full colour palette example in the [`_defaults.scss`](https://github.com/tinacious/base-layers/blob/main/scss/_defaults.scss) file.
+
+You can also use the colours mixin in `./utils/_colours.scss` to generate multiple colour palettes:
+
+```scss
+$rainbow-colour-palette: (
+  'red': red,
+  'orange': orange,
+  'yellow': yellow,
+  'green': green,
+  'blue': blue,
+  'indigo': indigo,
+  'purple': purple
+);
+
+@include make-colours(rainbow-fg, color, $rainbow-colour-palette);
+@include make-colours(rainbow-bg, background-color, $rainbow-colour-palette);
+```
+
+This will result in the following:
+
+<details>
+<summary><b>Generated CSS</b></summary>
+
+```css
+.rainbow-fg-red {
+  color: red;
+}
+
+.rainbow-fg-orange {
+  color: orange;
+}
+
+.rainbow-fg-yellow {
+  color: yellow;
+}
+
+.rainbow-fg-green {
+  color: green;
+}
+
+.rainbow-fg-blue {
+  color: blue;
+}
+
+.rainbow-fg-indigo {
+  color: indigo;
+}
+
+.rainbow-fg-purple {
+  color: purple;
+}
+
+.rainbow-bg-red {
+  background-color: red;
+}
+
+.rainbow-bg-orange {
+  background-color: orange;
+}
+
+.rainbow-bg-yellow {
+  background-color: yellow;
+}
+
+.rainbow-bg-green {
+  background-color: green;
+}
+
+.rainbow-bg-blue {
+  background-color: blue;
+}
+
+.rainbow-bg-indigo {
+  background-color: indigo;
+}
+
+.rainbow-bg-purple {
+  background-color: purple;
+}
+```
+</details>
+
 
 ## Grid
 
