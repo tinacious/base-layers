@@ -544,7 +544,9 @@ This colour palette can be as big as you want. Both a foreground and background 
 
 See a full colour palette example in the [`_defaults.scss`](https://github.com/tinacious/base-layers/blob/main/scss/_defaults.scss) file.
 
-You can also use the colours mixin in `./utils/_colours.scss` to generate multiple colour palettes:
+Colours will be included if you include either the `globals.scss` or `colours.scss` file. Colour classes are included when you include the whole package with `@import '~base-layers';`. If you do include it, it's recommended to customize the `$colour-palette` so it matches your product or brand instead of the default pink, purple, green and grey colours.
+
+You can also use the colours mixin in `./utils/_colours.scss` to generate additional colour palettes. Here's an example for how to generate a rainbow colour palette with both foreground and background utility classes:
 
 ```scss
 $rainbow-colour-palette: (
@@ -557,9 +559,18 @@ $rainbow-colour-palette: (
   'purple': purple
 );
 
+// generates fg-XX { color: XX }
 @include make-colours(rainbow-fg, color, $rainbow-colour-palette);
+
+// generates bg-XX { background-color: XX }
 @include make-colours(rainbow-bg, background-color, $rainbow-colour-palette);
 ```
+
+With the mixin, you'll need to generate both foreground and background colours, as done above. The `make-colours` mixin has the following arguments:
+
+- `$namespace`: the text before the colour name. A namespace for each background (e.g. `bg-`) and foreground (e.g. `fg-`) should be created.
+- `$property`: the property name, e.g. `color` or `background-color`
+- `$colours`: the custom colour palette
 
 This will result in the following:
 
