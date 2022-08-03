@@ -857,3 +857,6 @@ To use the globals, import them:
 - Example with namespacing
   - [View](https://u3fs8.csb.app/)
   - [Edit](https://codesandbox.io/s/base-layers-using-namespace-mixins-u3fs8?file=/styles.scss)
+- Example with custom colour palette
+  - [View](https://f9nlrn.csb.app/)
+  - [Edit](https://codesandbox.io/s/base-layers-custom-colour-palette-f9nlrn?file=/base-layers-config.scss)
