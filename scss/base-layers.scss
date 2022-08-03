@@ -13,11 +13,13 @@
 // Components & HTML/CSS helper classes
 @import './buttons.scss';
 @import './grid.scss';
+@import './colours.scss';
 @import './typography.scss';
 @import './spacing.scss';
 
 // Sass Mixins & utils (no classes)
 @import './utils/typography.scss';
+@import './utils/colours.scss';
 @import './utils/buttons.scss';
 @import './utils/rwd.scss';
 @import './utils/grid.scss';
