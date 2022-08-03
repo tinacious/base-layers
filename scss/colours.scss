@@ -1,0 +1,12 @@
+@import './defaults';
+@import './utils/colours';
+
+/**
+  Colour palettes
+ */
+
+// foreground
+@include make-colours(fg, color, $colour-palette);
+
+// background
+@include make-colours(bg, background-color, $colour-palette);

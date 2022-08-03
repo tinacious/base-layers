@@ -1,0 +1,8 @@
+// Adds the namespace in front of each colour class
+@mixin make-colours($namespace, $property, $colour-palette: $colour-palette) {
+  @each $colour-key, $colour-value in $colour-palette {
+    .#{$namespace}-#{$colour-key} {
+      #{$property}: $colour-value;
+    }
+  }
+}
